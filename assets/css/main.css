@@ -402,42 +402,6 @@ hr {
     margin-bottom: 15px;
 }
 
-.accreditation-wmd {
-    background-image: url(../img/projects/wmd.jpg);
-}
-
-.accreditation-cda {
-    background-image: url(../img/projects/cda.jpg);
-}
-
-.study-master {
-    background-image: url(../img/projects/master.jpg);
-}
-
-.study-bitcoin {
-    background-image: url(../img/projects/bitcoin.jpg);
-}
-
-.study-bachelor {
-    background-image: url(../img/projects/bachelor.jpg);
-}
-
-.study-entrepreneurship {
-    background-image: url(../img/projects/entrepreneurship.jpg);
-}
-.study-computer {
-    background-image: url(../img/projects/computer.jpg);
-}
-.study-social-networks {
-    background-image: url(../img/projects/social-networks.jpg);
-}
-.study-psychology {
-    background-image: url(../img/projects/psychology.jpg);
-}
-
-.study-design {
-    background-image: url(../img/projects/design.jpg);
-}
 
 .arrow-tip {
     position: absolute; bottom: -45px;right: -10px; width: 50px;

@@ -4,18 +4,25 @@
         <div class="project-content">
             <span class="badge" v-if="data.is_finished">{{$t('FINISHED')}}</span>
             <a :href="data.url" target="_blank">{{data.title}} </a>
-            <p>{{data.subtitle}}</p>
+            <p v-for="subtitle in subtitles" :key="subtitle">{{subtitle}}</p>
+            <img :src="data.logo" v-if="data.logo"/>
             <img v-if="data.type === 'book'" src="~/assets/img/icons/book.svg"/>
             <img v-if="data.type === 'talk'" src="~/assets/img/icons/microphone.svg"/>
             <img v-if="data.type === 'dead'" src="~/assets/img/icons/grave.svg"/>
             <img v-if="data.type === 'game'" src="~/assets/img/icons/gamepad.svg"/>
             <img v-if="data.type === 'web'" src="~/assets/img/icons/web.svg"/>
+            <img v-if="data.type === 'accreditation'" src="~/assets/img/icons/id-card.svg"/>
         </div>
     </li>
 </template>
 
 <script>
 export default {
+    computed: {
+        subtitles: function(){
+            return Array.isArray(this.data.subtitle) ? this.data.subtitle : [this.data.subtitle]
+        }
+    },
     props: ['data']
 }
 </script>

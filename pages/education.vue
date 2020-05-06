@@ -12,24 +12,7 @@
                 </div>
             </div>
             <ul class="projects-list">
-                <li>
-                    <div class="project-cover accreditation-wmd"></div>
-                    <div class="project-content">
-                        <a href="https://openclassrooms.com" target="_blank">{{$t('PROFESSIONAL_TITLE_ASSESSOR')}}</a>
-                        <p>{{$t('WEB_MOBILE_DEVELOPER')}}</p>
-                        <p>{{$t('LEVEL')}} III</p>
-                        <img src="~/assets/img/icons/id-card.svg"/>
-                    </div>
-                </li>
-                <li>
-                    <div class="project-cover accreditation-cda"></div>
-                    <div class="project-content">
-                        <a href="https://openclassrooms.com" target="_blank">{{$t('PROFESSIONAL_TITLE_ASSESSOR')}}</a>
-                        <p>{{$t('APPLICATION_DESIGNER_DEVELOPER')}}</p>
-                        <p>{{$t('LEVEL')}} IV</p>
-                        <img src="~/assets/img/icons/id-card.svg"/>
-                    </div>
-                </li>
+                <thumbnail :data="card_data" v-for="(card_data, index) in sections.accreditations.thumbnails" :key="index"/>
             </ul>
         </section>
         <section>
@@ -43,38 +26,7 @@
                 </div>
             </div>
             <ul class="projects-list">
-                <li>
-                    <div class="project-cover study-psychology"></div>
-                    <div class="project-content">
-                        <a href="https://openclassrooms.com" target="_blank">{{$t('OC_CERTIFICATION')}}</a>
-                        <p>{{$t('OC_CERTIFICATION_PSYCHOLOGY')}}</p>
-                        <img src="~/assets/img/icons/oc.png"/>
-                    </div>
-                </li>
-                <li>
-                    <div class="project-cover study-design"></div>
-                    <div class="project-content">
-                        <a href="https://openclassrooms.com" target="_blank">{{$t('OC_CERTIFICATION')}}</a>
-                        <p>{{$t('OC_CERTIFICATION_DESIGN_THINKING')}}</p>
-                        <img src="~/assets/img/icons/oc.png"/>
-                    </div>
-                </li>
-                <li>
-                    <div class="project-cover study-social-networks"></div>
-                    <div class="project-content">
-                        <a href="https://openclassrooms.com" target="_blank">{{$t('OC_CERTIFICATION')}}</a>
-                        <p>{{$t('OC_CERTIFICATION_SOCIAL_NETWORKS')}}</p>
-                        <img src="~/assets/img/icons/oc.png"/>
-                    </div>
-                </li>
-                <li>
-                    <div class="project-cover study-bitcoin"></div>
-                    <div class="project-content">
-                        <a href="https://openclassrooms.com/fr/course-certificates/5823847131" target="_blank">{{$t('OC_CERTIFICATION')}}</a>
-                        <p>{{$t('OC_CERTIFICATION_BITCOIN')}}</p>
-                        <img src="~/assets/img/icons/oc.png"/>
-                    </div>
-                </li>
+                <thumbnail :data="card_data" v-for="(card_data, index) in sections.certifications.thumbnails" :key="index"/>
             </ul>
         </section>
         <section>
@@ -88,38 +40,7 @@
                 </div>
             </div>
             <ul class="projects-list">
-                <li>
-                    <div class="project-cover study-master"></div>
-                    <div class="project-content">
-                        <a href="https://www.univ-nantes.fr/" target="_blank">{{$t('DEGREE_MASTER')}}</a>
-                        <p>{{$t('SOFTWARE_ARCHITECTURE')}}</p>
-                        <img src="~/assets/img/icons/nantes.png"/>
-                    </div>
-                </li>
-                <li>
-                    <div class="project-cover study-entrepreneurship"></div>
-                    <div class="project-content">
-                        <a href="https://www.univ-nantes.fr/" target="_blank">{{$t('DEGREE_UNIVERSITY_DIPLOMA')}}</a>
-                        <p>{{$t('ENTREPRENEURSHIP')}}</p>
-                        <img src="~/assets/img/icons/nantes.png"/>
-                    </div>
-                </li>
-                <li>
-                    <div class="project-cover study-bachelor"></div>
-                    <div class="project-content">
-                        <a href="https://www.univ-larochelle.fr" target="_blank">{{$t('DEGREE_BACHELOR')}}</a>
-                        <p>{{$t('SOFTWARE_ENGINEERING')}}</p>
-                        <img src="~/assets/img/icons/la-rochelle.png"/>
-                    </div>
-                </li>
-                <li>
-                    <div class="project-cover study-computer"></div>
-                    <div class="project-content">
-                        <a href="https://www.univ-larochelle.fr" target="_blank">{{$t('DEGREE_UNIVERSITY_DIPLOMA')}}</a>
-                        <p>{{$t('COMPUTER_SCIENCE')}}</p>
-                        <img src="~/assets/img/icons/la-rochelle.png"/>
-                    </div>
-                </li>
+                <thumbnail :data="card_data" v-for="(card_data, index) in sections.diplomas.thumbnails" :key="index"/>
             </ul>
         </section>
         
@@ -130,7 +51,23 @@
 
 <script>
 
+    import cover_wmd from "@/assets/img/projects/wmd.jpg"
+    import cover_cda from "@/assets/img/projects/cda.jpg"
+    import cover_master from "@/assets/img/projects/master.jpg"
+    import cover_bitcoin from "@/assets/img/projects/bitcoin.jpg"
+    import cover_bachelor from "@/assets/img/projects/bachelor.jpg"
+    import cover_entrepreneurship from "@/assets/img/projects/entrepreneurship.jpg"
+    import cover_computer from "@/assets/img/projects/computer.jpg"
+    import cover_social_networks from "@/assets/img/projects/social-networks.jpg"
+    import cover_psychology from "@/assets/img/projects/psychology.jpg"
+    import cover_design from "@/assets/img/projects/design.jpg"
+
+    import logo_nantes from "@/assets/img/icons/nantes.png"
+    import logo_lr from "@/assets/img/icons/la-rochelle.png"
+    import logo_oc from "@/assets/img/icons/oc.png"
+
     import chess from "../components/chess.vue"
+    import thumbnail from "../components/thumbnail.vue"
     
     export default {
         head: function(){
@@ -149,11 +86,102 @@
         },
         data: function(){
             return {
-                enigma_step: -1
+                enigma_step: -1,
+                sections: {
+                    accreditations: {
+                        thumbnails: [
+                            {
+                                cover: cover_wmd,
+                                url:"https://openclassrooms.com",
+                                title: this.$t('PROFESSIONAL_TITLE_ASSESSOR'),
+                                subtitle: [
+                                    this.$t('WEB_MOBILE_DEVELOPER'),
+                                    this.$t('LEVEL')+' III'
+                                ],
+                                type: 'accreditation'
+                            },
+                            {
+                                cover: cover_cda,
+                                url:"https://openclassrooms.com",
+                                title: this.$t('PROFESSIONAL_TITLE_ASSESSOR'),
+                                subtitle: [
+                                    this.$t('APPLICATION_DESIGNER_DEVELOPER'),
+                                    this.$t('LEVEL')+' IV'
+                                ],
+                                type: 'accreditation'
+                            }
+                        ]
+                    },
+                    certifications: {
+                        thumbnails: [
+                            {
+                                cover: cover_psychology,
+                                url: "https://openclassrooms.com",
+                                title: this.$t('OC_CERTIFICATION'),
+                                subtitle: this.$t('OC_CERTIFICATION_PSYCHOLOGY'),
+                                logo: logo_oc
+                            },
+                            {
+                                cover: cover_design,
+                                url: "https://openclassrooms.com",
+                                title: this.$t('OC_CERTIFICATION'),
+                                subtitle: this.$t('OC_CERTIFICATION_DESIGN_THINKING'),
+                                logo: logo_oc
+                            },
+                            {
+                                cover: cover_social_networks,
+                                url: "https://openclassrooms.com",
+                                title: this.$t('OC_CERTIFICATION'),
+                                subtitle: this.$t('OC_CERTIFICATION_SOCIAL_NETWORKS'),
+                                logo: logo_oc
+                            },
+                            {
+                                cover: cover_bitcoin,
+                                url: "https://openclassrooms.com/fr/course-certificates/5823847131",
+                                title: this.$t('OC_CERTIFICATION'),
+                                subtitle: this.$t('OC_CERTIFICATION_BITCOIN'),
+                                logo: logo_oc
+                            }
+                        ]
+                    },
+                    diplomas: {
+                        thumbnails: [
+                            {
+                                cover: cover_master,
+                                url:"https://www.univ-nantes.fr/",
+                                title: this.$t('DEGREE_MASTER'),
+                                subtitle: this.$t('SOFTWARE_ARCHITECTURE'),
+                                logo: logo_nantes,
+                            },
+                            {
+                                cover: cover_entrepreneurship,
+                                url: "https://www.univ-nantes.fr/",
+                                title: this.$t('DEGREE_UNIVERSITY_DIPLOMA'),
+                                subtitle: this.$t('ENTREPRENEURSHIP'),
+                                logo: logo_nantes
+                            },
+                            {
+                                cover: cover_bachelor,
+                                url: "https://www.univ-larochelle.fr",
+                                title: this.$t('DEGREE_BACHELOR'),
+                                subtitle: this.$t('SOFTWARE_ENGINEERING'),
+                                logo: logo_lr
+                            },
+                            {
+                                cover: cover_computer,
+                                url: "https://www.univ-larochelle.fr",
+                                title: this.$t('DEGREE_UNIVERSITY_DIPLOMA'),
+                                subtitle: this.$t('COMPUTER_SCIENCE'),
+                                logo: logo_lr
+                            }
+                        ]
+                    }
+                }
             };
         },
         components: {
-            "chess": chess
+            "chess": chess,
+            "thumbnail": thumbnail
         },
         methods: {
             show_next_enigma: function(step){
