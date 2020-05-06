@@ -1,6 +1,8 @@
-# kalico-landing
+# personal-website
 
-> Kalico landing for SEO
+> Nicolas Brondin-Bernard portfolio website
+
+![Project Cover](static/cover.jpg)
 
 ## Build Setup
 
