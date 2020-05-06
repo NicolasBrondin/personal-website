@@ -5,63 +5,46 @@
                 <div class="left-part">
                     <div class="top-triangle"></div>
                     <div class="bottom-triangle"></div>
-                </div><div class="flag-content">{{$t('SIDE_PROJECTS')}}</div><div class="right-part">
+                </div><div class="flag-content">{{$t('EVENTS')}}</div><div class="right-part">
                     <div class="top-triangle"></div>
                     <div class="bottom-triangle"></div>
                 </div>
             </div>
             <ul class="projects-list">
-                <li>
-                    <div class="project-cover project-candy"></div>
+                <li class="disabled">
+                    <div class="project-cover event-fortnite"></div>
                     <div class="project-content">
-                        <a href="https://nicolas-brondin-bernard.itch.io/candy-candy-candy" target="_blank">Candy Candy Candy</a>
-                        <p>{{$t("CANDY_DESCRIPTION")}}</p>
-                        <img src="~/assets/img/icons/gamepad.svg"/>
+                        <span class="badge">{{$t('FINISHED')}}</span>
+                        <a href="https://www.eventbrite.com/e/billets-conference-fortnite-a-t-il-transforme-mes-enfants-en-zombies-61984131205" target="_blank">{{$t('EDUCATION_CONFERENCE')}}</a>
+                        <p>{{$t('EDUCATION_CONFERENCE_TEXT')}}</p>
+                        <img src="~/assets/img/icons/microphone.svg"/>
                     </div>
                 </li>
-                <li>
-                    <div class="project-cover study-master"></div>
+                <li class="disabled">
+                    <div class="project-cover event-colorblind"></div>
                     <div class="project-content">
-                        <a href="/cv/index.html" target="_blank">{{$t("ONLINE_RESUME")}}</a>
-                        <p>{{$t("ONLINE_RESUME_DESCRIPTION")}}</p>
-                        <img src="~/assets/img/icons/web.svg"/>
+                        <span class="badge">{{$t('FINISHED')}}</span>
+                        <a>{{$t('DESIGN_TALK')}}</a>
+                        <p>{{$t('DESIGN_TALK_TEXT')}}</p>
+                        <img src="~/assets/img/icons/microphone.svg"/>
                     </div>
                 </li>
-            </ul>
-        </section>
-        <section>
-            <div class="flag">
-                <div class="left-part">
-                    <div class="top-triangle"></div>
-                    <div class="bottom-triangle"></div>
-                </div><div class="flag-content">{{$t('DEAD_PROJECTS')}}</div><div class="right-part">
-                    <div class="top-triangle"></div>
-                    <div class="bottom-triangle"></div>
-                </div>
-            </div>
-            <ul class="projects-list">
-                <li>
-                    <div class="project-cover project-kalico"></div>
+                <li class="disabled">
+                    <div class="project-cover event-game-design"></div>
                     <div class="project-content">
-                        <a target="_blank">Kalico</a>
-                        <p>{{$t("KALICO_DESCRIPTION")}}</p>
-                        <img src="~/assets/img/icons/grave.svg"/>
+                        <span class="badge">{{$t('FINISHED')}}</span>
+                        <a>{{$t('GAME_DESIGN_TALK')}}</a>
+                        <p>{{$t('GAME_DESIGN_TALK_TEXT')}}</p>
+                        <img src="~/assets/img/icons/microphone.svg"/>
                     </div>
                 </li>
-                <li>
-                    <div class="project-cover project-mais-combien"></div>
+                <li class="disabled">
+                    <div class="project-cover event-seo"></div>
                     <div class="project-content">
-                        <a  target="_blank">Mais Combien ?!</a>
-                        <p>{{$t("MAIS_COMBIEN_DESCRIPTION")}}</p>
-                        <img src="~/assets/img/icons/grave.svg"/>
-                    </div>
-                </li>
-                <li>
-                    <div class="project-cover project-beer-bucket"></div>
-                    <div class="project-content">
-                        <a target="_blank">Beer Bucket</a>
-                        <p>{{$t("BEER_BUCKET_DESCRIPTION")}}</p>
-                        <img src="~/assets/img/icons/grave.svg"/>
+                        <span class="badge">{{$t('FINISHED')}}</span>
+                        <a>{{$t('COMPUTER_SCIENCE_TALK')}}</a>
+                        <p>{{$t('COMPUTER_SCIENCE_TALK_TEXT')}}</p>
+                        <img src="~/assets/img/icons/microphone.svg"/>
                     </div>
                 </li>
             </ul>

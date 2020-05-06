@@ -6,32 +6,36 @@
             <img class="balloon" v-if="$route.path === '/'" src="~/assets/img/hot-air-balloon.svg"/>
             <div class="card">
                 <div class="bookmark-container">
-                    <nuxt-link to="/" class="bookmark">
+                    <nuxt-link :to="localePath('/')" exact class="bookmark">
                         <fa icon="home"/>
-                        <span>home</span>
+                        <span>{{$t('MENU_HOME')}}</span>
                     </nuxt-link>
-                    <nuxt-link to="/projects" class="bookmark">
+                    <nuxt-link :to="localePath('projects')" exact class="bookmark">
                         <fa icon="monument"/>
-                        <span>projets</span>
+                        <span>{{$t('MENU_PROJECTS')}}</span>
                     </nuxt-link>
-                    <nuxt-link to="/studies" class="bookmark">
+                    <nuxt-link :to="localePath('talks')" exact class="bookmark">
+                        <fa icon="bullhorn"/>
+                        <span>{{$t('MENU_TALKS')}}</span>
+                    </nuxt-link>
+                    <nuxt-link :to="localePath('education')" exact class="bookmark">
                         <fa icon="graduation-cap"/>
-                        <span>etudes</span>
+                        <span>{{$t('MENU_EDUCATION')}}</span>
                     </nuxt-link>
                     <a href="https://blog.nicolas.brondin-bernard.com" target="_blank" class="bookmark">
                         <fa icon="newspaper"/>
-                        <span>blog</span>
+                        <span>{{$t('MENU_BLOG')}}</span>
                     </a>
                     <a href="https://shop.brondin-bernard.com" target="_blank" class="bookmark">
                         <fa icon="shopping-basket"/>
-                        <span>shop</span>
+                        <span>{{$t('MENU_SHOP')}}</span>
                     </a>
                 </div>
                 <img class="card-bubble" src="~/assets/img/me-3.png"/>
-                <nuxt-link class="flag-lang lang-fr" :class="{'is-current': $i18n.locale =='fr'}" to="/">
+                <nuxt-link class="flag-lang lang-fr" :class="{'is-current': $i18n.locale =='fr'}" :to="switchLocalePath('fr')">
                     <img src="~/assets/img/flags/fr.png"/>
                 </nuxt-link>
-                <nuxt-link class="flag-lang lang-en" :class="{'is-current': $i18n.locale =='en'}" to="/en">
+                <nuxt-link class="flag-lang lang-en" :class="{'is-current': $i18n.locale =='en'}" :to="switchLocalePath('en')">
                     <img src="~/assets/img/flags/en.png"/>
                 </nuxt-link>
                 <section>

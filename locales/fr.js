@@ -54,6 +54,12 @@ module.exports = {
     COMPUTER_SCIENCE: "Informatique",
     FUN_FACT: "Fun fact: Ce site a été développé avec NuxtJS",
     CHESS: "Chess",
+    MENU_HOME: "Accueil",
+    MENU_PROJECTS: "Projets",
+    MENU_TALKS: "Talks",
+    MENU_EDUCATION: "Education",
+    MENU_BLOG: "Blog",
+    MENU_SHOP: "Boutique",
     META_INDEX_TITLE: "Nicolas Brondin-Bernard - Ingénieur Web Freelance et Entrepreneur",
     META_INDEX_DESCRIPTION: "Co-fondateur de Kalico, streameur Twitch, mari comblé, basé à Tours, France.",
     META_INDEX_KEYWORDS: "Nicolas Brondin-Bernard, Freelance, Ingénieur, Développeur Web, Entrepreneur, Kalico"
