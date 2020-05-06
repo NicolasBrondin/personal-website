@@ -27,6 +27,7 @@ module.exports = {
     CANDY_DESCRIPTION: "Un jeu indé sur la vente de bonbons... et bien plus.",
     BEER_BUCKET_DESCRIPTION: "Une monnaie virtuelle basée sur la bière et la confiance humaine.",
     MAIS_COMBIEN_DESCRIPTION: "Un site compilant des statistiques pour les débats politiques",
+    FORTNITE_DESCRIPTION: "a-t-il transformé nos enfants en zombies",
     LEVEL: "Niveau",
     EVENTS: "Evènements",
     DIPLOMAS: "Diplômes",

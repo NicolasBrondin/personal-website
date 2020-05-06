@@ -39,6 +39,7 @@ module.exports = {
     CANDY_DESCRIPTION: "An indie game about selling candies... and more.",
     BEER_BUCKET_DESCRIPTION: "A virtual currency based on beer and human trust.",
     MAIS_COMBIEN_DESCRIPTION: "A politics statistical numbers compiling website.",
+    FORTNITE_DESCRIPTION: "did it turn our children into zombies?",
     LEVEL: "Level",
     OC_CERTIFICATION: "OC Certification",
     OC_CERTIFICATION_PSYCHOLOGY: "Psychology applied to design",

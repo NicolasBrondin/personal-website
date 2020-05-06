@@ -11,14 +11,7 @@
                 </div>
             </div>
             <ul class="projects-list">
-                <li>
-                    <div class="project-cover project-fortnite"></div>
-                    <div class="project-content">
-                        <a href="https://kalico.shop" target="_blank">Fortnite </a>
-                        <p>a-t-il transformé nos enfants en zombies</p>
-                        <img src="~/assets/img/icons/book.svg"/>
-                    </div>
-                </li>
+                <thumbnail :data="card_data" v-for="(card_data, index) in sections.books.thumbnails" :key="index"/>
             </ul>
         </section>
         
@@ -30,7 +23,8 @@
 <script>
 
     import chess from "../components/chess.vue"
-    
+    import thumbnail from "../components/thumbnail.vue"
+    import cover_fortnite from "@/assets/img/projects/fortnite.jpg"
     export default {
         head: function(){
             return {
@@ -48,11 +42,25 @@
         },
         data: function(){
             return {
-                enigma_step: -1
+                enigma_step: -1,
+                sections: {
+                    books: {
+                        thumbnails: [
+                            {
+                                title: "Fortnite",
+                                subtitle: this.$t("FORTNITE_DESCRIPTION"),
+                                url: "https://shop.brondin-bernard.com/produit/ebook-fortnite-a-t-il-transforme-nos-enfants-en-zombies/",
+                                cover: cover_fortnite,
+                                type: "book"
+                            }
+                        ]
+                    }
+                }
             };
         },
         components: {
-            "chess": chess
+            "chess": chess,
+            "thumbnail": thumbnail
         },
         methods: {
             show_next_enigma: function(step){
