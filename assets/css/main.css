@@ -402,10 +402,6 @@ hr {
     margin-bottom: 15px;
 }
 
-.project-fortnite {
-    background-image: url(../img/projects/fortnite.jpg);
-}
-
 .project-kalico {
     background-image: url(../img/projects/kalico.jpg);
 }
@@ -428,20 +424,6 @@ hr {
 
 .accreditation-cda {
     background-image: url(../img/projects/cda.jpg);
-}
-.event-fortnite {
-    background-image: url(../img/projects/conference.jpg);
-}
-
-.event-seo {
-    background-image: url(../img/projects/seo.jpg);
-}
-
-.event-colorblind {
-    background-image: url(../img/projects/colorblind.jpg);
-}
-.event-game-design {
-    background-image: url(../img/projects/game-design.jpg);
 }
 
 .study-master {

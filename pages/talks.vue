@@ -11,42 +11,7 @@
                 </div>
             </div>
             <ul class="projects-list">
-                <li class="disabled">
-                    <div class="project-cover event-fortnite"></div>
-                    <div class="project-content">
-                        <span class="badge">{{$t('FINISHED')}}</span>
-                        <a href="https://www.eventbrite.com/e/billets-conference-fortnite-a-t-il-transforme-mes-enfants-en-zombies-61984131205" target="_blank">{{$t('EDUCATION_CONFERENCE')}}</a>
-                        <p>{{$t('EDUCATION_CONFERENCE_TEXT')}}</p>
-                        <img src="~/assets/img/icons/microphone.svg"/>
-                    </div>
-                </li>
-                <li class="disabled">
-                    <div class="project-cover event-colorblind"></div>
-                    <div class="project-content">
-                        <span class="badge">{{$t('FINISHED')}}</span>
-                        <a>{{$t('DESIGN_TALK')}}</a>
-                        <p>{{$t('DESIGN_TALK_TEXT')}}</p>
-                        <img src="~/assets/img/icons/microphone.svg"/>
-                    </div>
-                </li>
-                <li class="disabled">
-                    <div class="project-cover event-game-design"></div>
-                    <div class="project-content">
-                        <span class="badge">{{$t('FINISHED')}}</span>
-                        <a>{{$t('GAME_DESIGN_TALK')}}</a>
-                        <p>{{$t('GAME_DESIGN_TALK_TEXT')}}</p>
-                        <img src="~/assets/img/icons/microphone.svg"/>
-                    </div>
-                </li>
-                <li class="disabled">
-                    <div class="project-cover event-seo"></div>
-                    <div class="project-content">
-                        <span class="badge">{{$t('FINISHED')}}</span>
-                        <a>{{$t('COMPUTER_SCIENCE_TALK')}}</a>
-                        <p>{{$t('COMPUTER_SCIENCE_TALK_TEXT')}}</p>
-                        <img src="~/assets/img/icons/microphone.svg"/>
-                    </div>
-                </li>
+                <thumbnail :data="card_data" v-for="(card_data, index) in sections.talks.thumbnails" :key="index"/>
             </ul>
         </section>
         
@@ -57,7 +22,13 @@
 
 <script>
 
+    import fortnite_cover from "@/assets/img/projects/conference.jpg";
+    import seo_cover from "@/assets/img/projects/seo.jpg";
+    import colorblind_cover from "@/assets/img/projects/colorblind.jpg";
+    import design_cover from "@/assets/img/projects/design.jpg";
+
     import chess from "../components/chess.vue"
+    import thumbnail from "../components/thumbnail.vue"
     
     export default {
         head: function(){
@@ -76,11 +47,50 @@
         },
         data: function(){
             return {
+                sections: {
+                    talks: {
+                        thumbnails: [
+                            {
+                                is_finished: true,
+                                url:"https://www.eventbrite.com/e/billets-conference-fortnite-a-t-il-transforme-mes-enfants-en-zombies-61984131205",
+                                title: this.$t('EDUCATION_CONFERENCE'),
+                                subtitle: this.$t('EDUCATION_CONFERENCE_TEXT'),
+                                type:"talk",
+                                cover: fortnite_cover
+                            },
+                            {
+                                type:"talk",
+                                is_finished: true,
+                                url: "",
+                                title: this.$t('DESIGN_TALK'),
+                                subtitle: this.$t('DESIGN_TALK_TEXT'),
+                                cover: seo_cover
+                            },
+                            {
+                                type:"talk",
+                                is_finished: true,
+                                url: "",
+                                title: this.$t('GAME_DESIGN_TALK'),
+                                subtitle: this.$t('GAME_DESIGN_TALK_TEXT'),
+                                cover: colorblind_cover
+                            },
+                            {
+                                type:"talk",
+                                is_finished: true,
+                                url: "",
+                                title: this.$t('COMPUTER_SCIENCE_TALK'),
+                                subtitle: this.$t('COMPUTER_SCIENCE_TALK_TEXT'),
+                                cover: design_cover
+                            }
+                        ]
+                    }
+                },
                 enigma_step: -1
             };
         },
         components: {
-            "chess": chess
+            "chess": chess,
+            "thumbnail": thumbnail
         },
         methods: {
             show_next_enigma: function(step){

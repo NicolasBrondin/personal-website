@@ -1,10 +1,12 @@
 <template>
-    <li class="thumbnail">
+    <li class="thumbnail" :class="{'disabled': data.is_finished}">
         <div class="project-cover" :style="'background-image: url('+data.cover+')'"></div>
         <div class="project-content">
+            <span class="badge" v-if="data.is_finished">{{$t('FINISHED')}}</span>
             <a :href="data.url" target="_blank">{{data.title}} </a>
             <p>{{data.subtitle}}</p>
             <img v-if="data.type === 'book'" src="~/assets/img/icons/book.svg"/>
+            <img v-if="data.type === 'talk'" src="~/assets/img/icons/microphone.svg"/>
         </div>
     </li>
 </template>
@@ -94,4 +96,11 @@ export default {
         
         border-radius: 5px;
     }
+
+    @media screen and (max-width: 350px){
+
+    .thumbnail {
+        font-size: 15px;
+    }
+}
 </style>
