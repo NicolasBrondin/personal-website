@@ -7,6 +7,9 @@
             <p>{{data.subtitle}}</p>
             <img v-if="data.type === 'book'" src="~/assets/img/icons/book.svg"/>
             <img v-if="data.type === 'talk'" src="~/assets/img/icons/microphone.svg"/>
+            <img v-if="data.type === 'dead'" src="~/assets/img/icons/grave.svg"/>
+            <img v-if="data.type === 'game'" src="~/assets/img/icons/gamepad.svg"/>
+            <img v-if="data.type === 'web'" src="~/assets/img/icons/web.svg"/>
         </div>
     </li>
 </template>

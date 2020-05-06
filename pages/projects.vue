@@ -11,22 +11,7 @@
                 </div>
             </div>
             <ul class="projects-list">
-                <li>
-                    <div class="project-cover project-candy"></div>
-                    <div class="project-content">
-                        <a href="https://nicolas-brondin-bernard.itch.io/candy-candy-candy" target="_blank">Candy Candy Candy</a>
-                        <p>{{$t("CANDY_DESCRIPTION")}}</p>
-                        <img src="~/assets/img/icons/gamepad.svg"/>
-                    </div>
-                </li>
-                <li>
-                    <div class="project-cover study-master"></div>
-                    <div class="project-content">
-                        <a href="/cv/index.html" target="_blank">{{$t("ONLINE_RESUME")}}</a>
-                        <p>{{$t("ONLINE_RESUME_DESCRIPTION")}}</p>
-                        <img src="~/assets/img/icons/web.svg"/>
-                    </div>
-                </li>
+                <thumbnail :data="card_data" v-for="(card_data, index) in sections.projects.thumbnails" :key="index"/>
             </ul>
         </section>
         <section>
@@ -40,41 +25,21 @@
                 </div>
             </div>
             <ul class="projects-list">
-                <li>
-                    <div class="project-cover project-kalico"></div>
-                    <div class="project-content">
-                        <a target="_blank">Kalico</a>
-                        <p>{{$t("KALICO_DESCRIPTION")}}</p>
-                        <img src="~/assets/img/icons/grave.svg"/>
-                    </div>
-                </li>
-                <li>
-                    <div class="project-cover project-mais-combien"></div>
-                    <div class="project-content">
-                        <a  target="_blank">Mais Combien ?!</a>
-                        <p>{{$t("MAIS_COMBIEN_DESCRIPTION")}}</p>
-                        <img src="~/assets/img/icons/grave.svg"/>
-                    </div>
-                </li>
-                <li>
-                    <div class="project-cover project-beer-bucket"></div>
-                    <div class="project-content">
-                        <a target="_blank">Beer Bucket</a>
-                        <p>{{$t("BEER_BUCKET_DESCRIPTION")}}</p>
-                        <img src="~/assets/img/icons/grave.svg"/>
-                    </div>
-                </li>
+                <thumbnail :data="card_data" v-for="(card_data, index) in sections.dead_projects.thumbnails" :key="index"/>
             </ul>
         </section>
-        
-        
-        
     </div>
 </template>
 
 <script>
+    import cover_resume from "@/assets/img/projects/master.jpg"
+    import cover_kalico from "@/assets/img/projects/kalico.jpg"
+    import cover_candy from "@/assets/img/projects/candy-candy-candy.jpg"
+    import cover_mais_combien from "@/assets/img/projects/mais-combien.jpg"
+    import cover_beer_bucket from "@/assets/img/projects/beer-bucket.jpg"
 
     import chess from "../components/chess.vue"
+    import thumbnail from "../components/thumbnail.vue"
     
     export default {
         head: function(){
@@ -93,11 +58,54 @@
         },
         data: function(){
             return {
+                sections: {
+                    projects: {
+                        thumbnails: [
+                            {
+                                cover: cover_candy,
+                                url: "https://nicolas-brondin-bernard.itch.io/candy-candy-candy",
+                                title: "Candy Candy Candy",
+                                subtitle: this.$t("CANDY_DESCRIPTION"),
+                                type: "game"
+                            },
+                            {
+                                cover: cover_resume,
+                                url: "/cv/index.html",
+                                title: this.$t("ONLINE_RESUME"),
+                                subtitle: this.$t("ONLINE_RESUME_DESCRIPTION"),
+                                type: "web"
+                            }
+                        ]
+                    },
+                    dead_projects: {
+                        thumbnails: [
+                            {   
+                                cover: cover_kalico,
+                                title: "Kalico",
+                                subtitle: this.$t("KALICO_DESCRIPTION"),
+                                type: "dead"
+                            },
+                            { 
+                                cover: cover_mais_combien,
+                                title: "Mais Combien ?!",
+                                subtitle: this.$t("MAIS_COMBIEN_DESCRIPTION"),
+                                type: "dead"
+                            },
+                            {
+                                cover: cover_beer_bucket,
+                                title: "Beer Bucket",
+                                subtitle: this.$t("BEER_BUCKET_DESCRIPTION"),
+                                type: "dead"
+                            }
+                        ]
+                    }
+                },
                 enigma_step: -1
             };
         },
         components: {
-            "chess": chess
+            "chess": chess,
+            "thumbnail": thumbnail
         },
         methods: {
             show_next_enigma: function(step){
