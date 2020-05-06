@@ -32,6 +32,9 @@
                     </a>
                 </div>
                 <img class="card-bubble" src="~/assets/img/me-3.png"/>
+                <div id="thoughts">
+                    <span>{{$t("ENIGMA")}}</span>
+                </div>
                 <nuxt-link class="flag-lang lang-fr" :class="{'is-current': $i18n.locale =='fr'}" :to="switchLocalePath('fr')">
                     <img src="~/assets/img/flags/fr.png"/>
                 </nuxt-link>
@@ -68,7 +71,6 @@
                 </nav>-->
                 <section>
                     <h2 v-show="enigma_step >= 0">"{{$t("QUOTE_1")}}<span style="cursor: pointer;font-weight: 500;" @click="show_next_enigma(1)">{{$t("QUOTE_2")}}</span>{{$t("QUOTE_3")}}"</h2>
-                    <p class="hint">{{$t("ENIGMA")}}</p>
                 </section>
                 <section v-if="enigma_step >= 1">
                     <div class="flag">
@@ -122,6 +124,11 @@
     import nav_css from '~/assets/css/nav.css';
     import font_ink from '~/assets/css/font-ink.css';
     export default {
+        data: function(){
+            return {
+                enigma_step: -1
+            }
+        },
         components: {
             "popup-manager": PopupManager
         }

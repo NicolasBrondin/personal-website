@@ -1,15 +1,7 @@
 <template>
     <div class="page-content">
         <section>
-            <div class="flag">
-                <div class="left-part">
-                    <div class="top-triangle"></div>
-                    <div class="bottom-triangle"></div>
-                </div><div class="flag-content">{{$t('EVENTS')}}</div><div class="right-part">
-                    <div class="top-triangle"></div>
-                    <div class="bottom-triangle"></div>
-                </div>
-            </div>
+            <flag :text="$t('EVENTS')"/>
             <ul class="projects-list">
                 <thumbnail :data="card_data" v-for="(card_data, index) in sections.talks.thumbnails" :key="index"/>
             </ul>
@@ -27,6 +19,7 @@
     import colorblind_cover from "@/assets/img/projects/colorblind.jpg";
     import design_cover from "@/assets/img/projects/design.jpg";
 
+    import flag from "../components/flag.vue"
     import chess from "../components/chess.vue"
     import thumbnail from "../components/thumbnail.vue"
     
@@ -89,6 +82,7 @@
             };
         },
         components: {
+            "flag": flag,
             "chess": chess,
             "thumbnail": thumbnail
         },

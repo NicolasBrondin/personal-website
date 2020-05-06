@@ -12,7 +12,7 @@ module.exports = {
     QUOTE_1: "Every ",
     QUOTE_2: "chess",
     QUOTE_3: " master was once a beginner – Irving Chernev",
-    ENIGMA: "Hmm.. Maybe clicking on the plane would trigger something ?",
+    ENIGMA: "Maybe clicking on the plane would trigger something ?",
     ONLINE_RESUME_DESCRIPTION: "Try it if you like command lines",
     MY_LINKS: "or one of my awesome links on the internet:",
     SHOOT_EMAIL: "Shoot me an email",

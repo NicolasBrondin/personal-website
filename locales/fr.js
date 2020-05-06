@@ -12,7 +12,7 @@ module.exports = {
     QUOTE_1: "Le succès, c'est se promener d'échecs en ",
     QUOTE_2: "échecs",
     QUOTE_3: " tout en restant motivé. - Winston Churchill",
-    ENIGMA: "Hmm.. Peut-être que cliquer sur l'avion déclencherait quelque chose ?",
+    ENIGMA: "Peut-être que cliquer sur l'avion déclencherait quelque chose ?",
     ONLINE_RESUME_DESCRIPTION: "Essaye-le si tu aimes les lignes de commandes",
     MY_LINKS: "ou un de mes incroyables liens sur l'internet:",
     SHOOT_EMAIL: "Lance-moi un email",

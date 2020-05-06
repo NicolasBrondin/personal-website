@@ -1,29 +1,13 @@
 <template>
     <div class="page-content">
         <section>
-            <div class="flag">
-                <div class="left-part">
-                    <div class="top-triangle"></div>
-                    <div class="bottom-triangle"></div>
-                </div><div class="flag-content">{{$t('SIDE_PROJECTS')}}</div><div class="right-part">
-                    <div class="top-triangle"></div>
-                    <div class="bottom-triangle"></div>
-                </div>
-            </div>
+            <flag :text="$t('SIDE_PROJECTS')"/>
             <ul class="projects-list">
                 <thumbnail :data="card_data" v-for="(card_data, index) in sections.projects.thumbnails" :key="index"/>
             </ul>
         </section>
         <section>
-            <div class="flag">
-                <div class="left-part">
-                    <div class="top-triangle"></div>
-                    <div class="bottom-triangle"></div>
-                </div><div class="flag-content">{{$t('DEAD_PROJECTS')}}</div><div class="right-part">
-                    <div class="top-triangle"></div>
-                    <div class="bottom-triangle"></div>
-                </div>
-            </div>
+            <flag :text="$t('DEAD_PROJECTS')"/>
             <ul class="projects-list">
                 <thumbnail :data="card_data" v-for="(card_data, index) in sections.dead_projects.thumbnails" :key="index"/>
             </ul>
@@ -38,6 +22,7 @@
     import cover_mais_combien from "@/assets/img/projects/mais-combien.jpg"
     import cover_beer_bucket from "@/assets/img/projects/beer-bucket.jpg"
 
+    import flag from "../components/flag.vue"
     import chess from "../components/chess.vue"
     import thumbnail from "../components/thumbnail.vue"
     
@@ -104,6 +89,7 @@
             };
         },
         components: {
+            "flag": flag,
             "chess": chess,
             "thumbnail": thumbnail
         },

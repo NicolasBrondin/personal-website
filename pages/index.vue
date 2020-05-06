@@ -1,30 +1,21 @@
 <template>
     <div class="page-content">
         <section>
-            <div class="flag">
-                <div class="left-part">
-                    <div class="top-triangle"></div>
-                    <div class="bottom-triangle"></div>
-                </div><div class="flag-content">{{$t('BOOKS')}}</div><div class="right-part">
-                    <div class="top-triangle"></div>
-                    <div class="bottom-triangle"></div>
-                </div>
-            </div>
+            <flag :text="$t('BOOKS')"/>
             <ul class="projects-list">
                 <thumbnail :data="card_data" v-for="(card_data, index) in sections.books.thumbnails" :key="index"/>
             </ul>
         </section>
-        
-        
-        
     </div>
 </template>
 
 <script>
 
+    import flag from "../components/flag.vue"
     import chess from "../components/chess.vue"
     import thumbnail from "../components/thumbnail.vue"
     import cover_fortnite from "@/assets/img/projects/fortnite.jpg"
+    
     export default {
         head: function(){
             return {
@@ -60,6 +51,7 @@
         },
         components: {
             "chess": chess,
+            "flag": flag,
             "thumbnail": thumbnail
         },
         methods: {

@@ -2,43 +2,19 @@
     <div class="page-content">
         
         <section>
-            <div class="flag">
-                <div class="left-part">
-                    <div class="top-triangle"></div>
-                    <div class="bottom-triangle"></div>
-                </div><div class="flag-content">{{$t('ACCREDITATIONS')}}</div><div class="right-part">
-                    <div class="top-triangle"></div>
-                    <div class="bottom-triangle"></div>
-                </div>
-            </div>
+            <flag :text="$t('ACCREDITATIONS')"/>
             <ul class="projects-list">
                 <thumbnail :data="card_data" v-for="(card_data, index) in sections.accreditations.thumbnails" :key="index"/>
             </ul>
         </section>
         <section>
-            <div class="flag">
-                <div class="left-part">
-                    <div class="top-triangle"></div>
-                    <div class="bottom-triangle"></div>
-                </div><div class="flag-content">{{$t('CERTIFICATIONS')}}</div><div class="right-part">
-                    <div class="top-triangle"></div>
-                    <div class="bottom-triangle"></div>
-                </div>
-            </div>
+            <flag :text="$t('CERTIFICATIONS')"/>
             <ul class="projects-list">
                 <thumbnail :data="card_data" v-for="(card_data, index) in sections.certifications.thumbnails" :key="index"/>
             </ul>
         </section>
         <section>
-            <div class="flag">
-                <div class="left-part">
-                    <div class="top-triangle"></div>
-                    <div class="bottom-triangle"></div>
-                </div><div class="flag-content">{{$t('DIPLOMAS')}}</div><div class="right-part">
-                    <div class="top-triangle"></div>
-                    <div class="bottom-triangle"></div>
-                </div>
-            </div>
+            <flag :text="$t('DIPLOMAS')"/>
             <ul class="projects-list">
                 <thumbnail :data="card_data" v-for="(card_data, index) in sections.diplomas.thumbnails" :key="index"/>
             </ul>
@@ -66,6 +42,7 @@
     import logo_lr from "@/assets/img/icons/la-rochelle.png"
     import logo_oc from "@/assets/img/icons/oc.png"
 
+    import flag from "../components/flag.vue"
     import chess from "../components/chess.vue"
     import thumbnail from "../components/thumbnail.vue"
     
@@ -180,6 +157,7 @@
             };
         },
         components: {
+            "flag": flag,
             "chess": chess,
             "thumbnail": thumbnail
         },
