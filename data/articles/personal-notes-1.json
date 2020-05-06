@@ -1,0 +1,11 @@
+{
+    "id": 1,
+    "date": 1549321200000,
+    "title": "Lorem ipsum doloris amet",
+    "slug": "lorem-ipsum",
+    "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+    "author": "Nicolas Brondin-Bernard",
+    "cover": "https://images.unsplash.com/photo-1578422511109-d29c9df6772d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+    "tags": ["Nouveau"],
+    "content": "> Hello. \n\n It’s funny how sometimes simple words are harder to write than others. This one above is the kind we say and write everyday, but today it was a bit harder because it means more than it regularly do when I use it. \n\n Today it means that I am starting something new, that I’m stepping outside my comfort zone by starting these writing sessions, which you can call a blog if you like, a journal if you prefer, or any other word which can represent this (future) bunch of written notes. \n\n > Why and why now?"
+}

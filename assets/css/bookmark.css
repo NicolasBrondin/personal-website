@@ -1,0 +1,51 @@
+.bookmark-container {
+    position: absolute;
+    top: 20px;
+    left: -50px;
+    z-index: 0;
+}
+
+.bookmark {
+    position: relative;
+    background: white;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    /**box-shadow: -6px 0px 5px 0px rgba(0,0,0,0.1);*/
+    margin: 3px 0px;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+
+.bookmark.nuxt-link-exact-active {
+    background: #3498db;
+}
+
+.bookmark::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right:1.5px;
+    box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.1);
+}
+
+.bookmark.nuxt-link-exact-active::after{
+    /*box-shadow: none;*/
+}
+
+.bookmark *{
+    color: rgba(0,0,0,0.3);
+    margin: 0px auto;
+}
+.bookmark.nuxt-link-exact-active *{
+color: white;
+}
+.bookmark span {
+    font-size: 10px;
+}

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Ink';
+    src: url('../fonts/InkFree.eot');
+    src: url('../fonts/InkFree.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/InkFree.woff2') format('woff2'),
+        url('../fonts/InkFree.woff') format('woff'),
+        url('../fonts/InkFree.ttf') format('truetype'),
+        url('../fonts/InkFree.svg#InkFree') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
