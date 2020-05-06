@@ -16,6 +16,8 @@ module.exports = {
     ONLINE_RESUME_DESCRIPTION: "Try it if you like command lines",
     MY_LINKS: "or one of my awesome links on the internet:",
     SHOOT_EMAIL: "Shoot me an email",
+    NEWS:"Right now",
+    COLLABORATION: "We worked together",
     BOOKS: "Books",
     SIDE_PROJECTS: "Productions",
     DEAD_PROJECTS: "Dead projects",

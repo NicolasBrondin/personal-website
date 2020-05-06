@@ -49,7 +49,7 @@
                     <h2>{{$t('TITLE')}}</h2>
                     <h3>
                         <span>{{$t('CITY')}}</span> 
-                        <span>{{$t('CO_FOUNDER')}}</span> 
+                        <!--<span>{{$t('CO_FOUNDER')}}</span> -->
                         <span>{{$t('AUTHOR')}}</span> 
                         <span>{{$t('STREAMER')}}</span> 
                         <span>{{$t('HUSBAND')}}</span> 
@@ -111,7 +111,9 @@
                     </ul>
                     <a class="btn" href="mailto:nicolas@brondin.com">{{$t('SHOOT_EMAIL')}}<img src="~/assets/img/icons/paper-plane.svg" height="20"/></a>
                 </section>
-                <p>{{$t('FUN_FACT')}}</p>
+                <footer>
+                    <p>{{$t('FUN_FACT')}}</p>
+                </footer>
             </div>
         </div>
     </main>

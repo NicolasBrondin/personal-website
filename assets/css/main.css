@@ -106,11 +106,6 @@ h3 {
     margin-top: 10px;
 }
 
-p {
-    font-size: 12px;
-    margin-top: 25px;
-    color: rgba(0,0,0,0.3);
-}
 
 a {
     color: inherit;
@@ -241,6 +236,13 @@ hr {
 
 .arrow-tip--icon {
     height: 30px;position: absolute; top:-0px;right: 0px;transform: rotate(-45deg);
+}
+
+
+footer p {
+    font-size: 12px;
+    margin-top: 25px;
+    color: rgba(0,0,0,0.3);
 }
 
 @media screen and (max-width: 800px){
