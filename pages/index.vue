@@ -89,33 +89,7 @@
             "thumbnail": thumbnail
         },
         methods: {
-            show_next_enigma: function(step){
-                console.log(this.enigma_step);
-                if(this.enigma_step < step){
-                    this.enigma_step = step;
-                }
-                switch(this.enigma_step){
-                    case 0: {
-                        var event = new CustomEvent('show_popup',{detail: this.enigma_step});
-                        document.dispatchEvent(event);
-                        break;
-                    }
-                    case 1: {
-                        
-                        var event = new CustomEvent('show_popup',{detail: this.enigma_step});
-                        document.dispatchEvent(event);
-                        break;
-                    }
-                    case 2: {
-                        
-                        var event = new CustomEvent('show_popup',{detail: this.enigma_step});
-                        document.dispatchEvent(event);
-                        break;
-                    }
-                    //Comme sur une pizza, on peut manger la reine
-                }
-                
-            }
+            
         }
     }
 </script>

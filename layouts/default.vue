@@ -2,7 +2,7 @@
     <main>
         <popup-manager/>
         <div class="page">
-            <img class="plane" src="~/assets/img/plane.svg" @click="show_next_enigma(0)"/>
+            <img class="plane" src="~/assets/img/plane.svg" @click="show_enigma()"/>
             <img class="balloon" v-if="$route.path === '/'" src="~/assets/img/hot-air-balloon.svg"/>
             <div class="card">
                 <div class="bookmark-container">
@@ -69,9 +69,6 @@
                         </li>
                     </ul>
                 </nav>-->
-                <section>
-                    <h2 v-show="enigma_step >= 0">"{{$t("QUOTE_1")}}<span style="cursor: pointer;font-weight: 500;" @click="show_next_enigma(1)">{{$t("QUOTE_2")}}</span>{{$t("QUOTE_3")}}"</h2>
-                </section>
                 <section v-if="enigma_step >= 1">
                     <div class="flag">
                         <div class="left-part">
@@ -129,6 +126,14 @@
         data: function(){
             return {
                 enigma_step: -1
+            }
+        },
+        methods: {
+            show_enigma: function(){
+                        var event = new CustomEvent('show_popup',{});
+                        document.dispatchEvent(event);
+                        
+                
             }
         },
         components: {

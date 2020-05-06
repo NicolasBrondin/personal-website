@@ -54,7 +54,7 @@ export default {
                     this.from = null;
                 } else if(this.move_piece(this.from,{square:square,x:x,y:y})){
                     if(square.piece === "queen"){
-                        this.show_next_enigma(2);
+                        this.show_next_enigma();
                     }
                     Vue.set(square,"piece",this.from.square.piece);
                     Vue.set(square,"color",this.from.square.color);
