@@ -13,8 +13,9 @@
             <ul class="projects-list">
                 <thumbnail :data="card_data" v-for="(card_data, index) in sections.books.thumbnails" :key="index"/>
             </ul>
-            <a class="btn" href="mailto:nicolas@brondin.com">{{$t('SHOOT_EMAIL')}}<img src="~/assets/img/icons/paper-plane.svg" height="20"/></a>
-                
+            <p>
+                <nuxt-link :to="localePath('projects')">{{$t('MORE_PROJECTS')}}</nuxt-link>
+            </p>  
         </section>
         <section>
             <flag :text="$t('COLLABORATION')"/>
@@ -39,7 +40,8 @@
     import flag from "../components/flag.vue"
     import chess from "../components/chess.vue"
     import thumbnail from "../components/thumbnail.vue"
-    import cover_fortnite from "@/assets/img/projects/fortnite.jpg"
+    import cover_fortnite from "@/assets/img/projects/conference.jpg"
+    import cover_blog from "@/assets/img/projects/blog.jpg"
 
     export default {
         head: function(){
@@ -63,7 +65,7 @@
                     books: {
                         thumbnails: [
                             {
-                                title: "Fortnite",
+                                title: this.$t("FORTNITE"),
                                 subtitle: this.$t("FORTNITE_DESCRIPTION"),
                                 url: "https://shop.brondin-bernard.com/produit/ebook-fortnite-a-t-il-transforme-nos-enfants-en-zombies/",
                                 cover: cover_fortnite,
@@ -72,8 +74,8 @@
                             {
                                 title: "Blog",
                                 subtitle: this.$t("LAST_BLOG_POST"),
-                                url: "https://blog.nicolas.brondin-bernard.com/last/fr/",
-                                cover: cover_fortnite,
+                                url: this.$i18n.locale === 'fr' ? "https://blog.nicolas.brondin-bernard.com/last/fr/" : "https://blog.nicolas.brondin-bernard.com/last/en/",
+                                cover: cover_blog,
                                 type: "web"
                             }
                         ]

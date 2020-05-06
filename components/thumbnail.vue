@@ -43,6 +43,10 @@ export default {
         background: black;
     }
 
+    .thumbnail a {
+        font-weight: bold;
+    }
+
     .thumbnail .project-cover {
         position: absolute;
         width: 100%;

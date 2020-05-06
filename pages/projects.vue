@@ -7,6 +7,13 @@
             </ul>
         </section>
         <section>
+            <flag :text="$t('CUSTOMERS_PROJECTS')"/>
+            <ul class="projects-list">
+                <p>{{$t('PUBLIC_PROJECTS')}}</p>
+                <thumbnail :data="card_data" v-for="(card_data, index) in sections.customers_projects.thumbnails" :key="index"/>
+            </ul>
+        </section>
+        <section>
             <flag :text="$t('DEAD_PROJECTS')"/>
             <ul class="projects-list">
                 <thumbnail :data="card_data" v-for="(card_data, index) in sections.dead_projects.thumbnails" :key="index"/>
@@ -21,6 +28,11 @@
     import cover_candy from "@/assets/img/projects/candy-candy-candy.jpg"
     import cover_mais_combien from "@/assets/img/projects/mais-combien.jpg"
     import cover_beer_bucket from "@/assets/img/projects/beer-bucket.jpg"
+    import cover_klassroom from "@/assets/img/projects/klassroom.jpg"
+    import cover_klassroom_web from "@/assets/img/projects/klassroom-web.jpg"
+    import cover_chdr from "@/assets/img/projects/chdr.jpg"
+    import cover_winesee from "@/assets/img/projects/winesee.jpg"
+    import cover_winesee_pro from "@/assets/img/projects/winesee-pro.jpg"
 
     import flag from "../components/flag.vue"
     import chess from "../components/chess.vue"
@@ -58,6 +70,45 @@
                                 url: "/cv/index.html",
                                 title: this.$t("ONLINE_RESUME"),
                                 subtitle: this.$t("ONLINE_RESUME_DESCRIPTION"),
+                                type: "web"
+                            }
+                        ]
+                    },
+                    customers_projects: {
+                        thumbnails: [
+                            {
+                                cover: cover_winesee,
+                                url: "https://winesee.fr",
+                                title: this.$t("WINESEE"),
+                                subtitle: this.$t("WINESEE_DESCRIPTION"),
+                                type: "web"
+                            },
+                            {
+                                cover: cover_winesee_pro,
+                                url: "https://pro.winesee.fr",
+                                title: this.$t("WINESEE_PRO"),
+                                subtitle: this.$t("WINESEE_PRO_DESCRIPTION"),
+                                type: "web"
+                            },
+                            {
+                                cover: cover_klassroom,
+                                url: "https://klassroom.fr/",
+                                title: this.$t("KLASSROOM"),
+                                subtitle: this.$t("KLASSROOM_DESCRIPTION"),
+                                type: "web"
+                            },
+                            {
+                                cover: cover_klassroom_web,
+                                url: "https://app.klassroom.fr/",
+                                title: this.$t("KLASSROOM_WEB_APP"),
+                                subtitle: this.$t("KLASSROOM_WEB_APP_DESCRIPTION"),
+                                type: "web"
+                            },
+                            {
+                                cover: cover_chdr,
+                                url: "https://chrome.google.com/webstore/detail/savings-radar-by-chdr/jpdgjenffbjdkdbgifemcdmomnnkjabk?hl=en-US",
+                                title: "Savings radar",
+                                subtitle: this.$t("CHDR_DESCRIPTION"),
                                 type: "web"
                             }
                         ]
