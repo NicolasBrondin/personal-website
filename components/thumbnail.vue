@@ -12,6 +12,7 @@
             <img v-if="data.type === 'game'" src="~/assets/img/icons/gamepad.svg"/>
             <img v-if="data.type === 'web'" src="~/assets/img/icons/web.svg"/>
             <img v-if="data.type === 'accreditation'" src="~/assets/img/icons/id-card.svg"/>
+            <img v-if="data.type === 'electronics'" src="~/assets/img/icons/chip.svg"/>
         </div>
     </li>
 </template>

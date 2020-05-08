@@ -33,6 +33,12 @@
     import cover_chdr from "@/assets/img/projects/chdr.jpg"
     import cover_winesee from "@/assets/img/projects/winesee.jpg"
     import cover_winesee_pro from "@/assets/img/projects/winesee-pro.jpg"
+    import cover_flower_player from "@/assets/img/projects/flower-player.jpg"
+    import cover_scribee from "@/assets/img/projects/scribee.jpg"
+    import cover_peetch from "@/assets/img/projects/peetch.jpg"
+    import cover_book_pie from "@/assets/img/projects/book-pie.jpg"
+    import cover_cocaine_video from "@/assets/img/projects/cocaine-video.jpg"
+    import cover_eurekube from "@/assets/img/projects/eurekube.jpg"
 
     import flag from "../components/flag.vue"
     import chess from "../components/chess.vue"
@@ -64,6 +70,26 @@
                                 title: "Candy Candy Candy",
                                 subtitle: this.$t("CANDY_DESCRIPTION"),
                                 type: "game"
+                            },
+                            {
+                                cover: cover_scribee,
+                                url: "https://nicolasbrondin.github.io/scribee/",
+                                title: "Scribee",
+                                subtitle: this.$t("SCRIBEE_DESCRIPTION"),
+                                type: "game"
+                            },{
+                                cover: cover_flower_player,
+                                url: "https://blog.nicolas.brondin-bernard.com/building-an-open-source-mp3-player/",
+                                title: "Flower Player",
+                                subtitle: this.$t("FLOWER_PLAYER_DESCRIPTION"),
+                                type: "electronics"
+                            },
+                            {
+                                cover: cover_book_pie,
+                                url: "https://github.com/NicolasBrondin/book-pie",
+                                title: "Book Pie",
+                                subtitle: this.$t("BOOK_PIE_DESCRIPTION"),
+                                type: "electronics"
                             },
                             {
                                 cover: cover_resume,
@@ -131,6 +157,24 @@
                                 cover: cover_beer_bucket,
                                 title: "Beer Bucket",
                                 subtitle: this.$t("BEER_BUCKET_DESCRIPTION"),
+                                type: "dead"
+                            },
+                            {
+                                cover: cover_peetch,
+                                title: "Peetch",
+                                subtitle: this.$t("PEETCH_DESCRIPTION"),
+                                type: "dead"
+                            },
+                            {
+                                cover: cover_cocaine_video,
+                                title: "Cocaine Video",
+                                subtitle: this.$t("COCAINE_VIDEO_DESCRIPTION"),
+                                type: "dead"
+                            },
+                            {
+                                cover: cover_eurekube,
+                                title: "Eurekube",
+                                subtitle: this.$t("EUREKUBE_DESCRIPTION"),
                                 type: "dead"
                             }
                         ]
