@@ -31,6 +31,11 @@
                 <a class="customer"><img src="@/assets/img/customers/bouygues-construction.png"/></a>
                 <a class="customer"><img src="@/assets/img/customers/ministere-interieur.jpg"/></a>
             </div>
+            <div class="feedbacks">
+                <transition-group name="slide" mode="out-in">
+                    <feedback :data="feedback" v-for="(feedback, index) in sections.customers.feedbacks" v-show="index === sections.customers.feedback_index" :key="feedback.name"/>
+                </transition-group>
+            </div>
         </section>
     </div>
 </template>
@@ -39,9 +44,15 @@
 
     import flag from "../components/flag.vue"
     import chess from "../components/chess.vue"
+    import feedback from "../components/feedback.vue"
     import thumbnail from "../components/thumbnail.vue"
     import cover_fortnite from "@/assets/img/projects/conference.jpg"
     import cover_blog from "@/assets/img/projects/blog.jpg"
+    import photo_pierre_tostain from "@/assets/img/feedbacks/pierre-tostain.png"
+    import photo_mina_tostain from "@/assets/img/feedbacks/mina-tostain.jpg"
+    import photo_slyvain_guiheneuc from "@/assets/img/feedbacks/sylvain-guiheneuc.jpg"
+    import photo_antoine_perigne from "@/assets/img/feedbacks/antoine-perigne.png"
+    import photo_olympe_deroubaix from "@/assets/img/feedbacks/olympe-deroubaix.jpg"
 
     export default {
         head: function(){
@@ -79,14 +90,53 @@
                                 type: "web"
                             }
                         ]
+                    },
+                    customers: {
+                        feedback_index:0,
+                        feedbacks: [
+                            {
+                                name: "Pierre Tostain",
+                                position: "Ex-Directeur commercial chez My-Serious-Game",
+                                text: "Ambassadeur de l'amélioration continue, véritable entrepreneur efficient et innovant, Nicolas est un vrai atout et une ressource de confiance sur laquelle miser.",
+                                photo: photo_pierre_tostain
+                            },
+                            {
+                                name: "Antoine Périgne",
+                                position: "Fondateur de la Social Media Family",
+                                text: "Pour avoir travaillé avec Nicolas sur plusieurs projets et avec des collègues qui ont fait la même chose, j'ai toujours eu des retours positifs sur son travail, tant sur la rapidité d'exécution que le prix et le produit final ! ",
+                                photo: photo_antoine_perigne
+                            },
+                            {
+                                name: "Olympe Deroubaix",
+                                position: "Ex-campus manager chez Wild Code School",
+                                text: "Nicolas a toujours su se rendre disponible et à l'écoute à chaque fois que nous avons collaboré ! Son expertise également fait de lui quelqu'un avec qui on a confiance de travailler.",
+                                photo: photo_olympe_deroubaix
+                            },{
+                                name: "Mina Tostain-Mihailovic",
+                                position: "Chargée de recrutement et mobilité chez Domitys",
+                                text: "Nicolas a aidé notre service RH à mettre en place un outils innovant pour accompagner nos managers dans les entretiens de recrutement. Le support est fonctionnel, facile d'utilisation et surtout, Nicolas a été très à l'écoute et patient pour adapter le support à nos besoins. Merci à toi pour ton professionnalisme et ta grande réactivité !",
+                                photo: photo_mina_tostain
+                            },{
+                                name: "Sylvain Guiheneuc",
+                                position: "Illustrateur freelance",
+                                text: "Nicolas est une personne avec qui il est extrêmement agréable de travailler. Une vision global et ludique des projets et toujours de très bon conseil.",
+                                photo: photo_slyvain_guiheneuc
+                            },
+                        ]
                     }
                 }
             };
         },
+        mounted: function(){
+            setInterval(function(){
+                this.sections.customers.feedback_index = (this.sections.customers.feedback_index + 1) % this.sections.customers.feedbacks.length;
+            }.bind(this),7000);
+        },
         components: {
             "chess": chess,
             "flag": flag,
-            "thumbnail": thumbnail
+            "thumbnail": thumbnail,
+            "feedback": feedback
         },
         methods: {
             
@@ -116,5 +166,29 @@
     }
     .customer img{
         height:100%;
+    }
+
+    .feedbacks {
+        margin: 20px 0px;
+        overflow: hidden;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .slide-enter-active, .slide-leave-active {
+        transition: opacity 1s, transform 1s;
+    }
+
+    .slide-leave-active {
+        display: none;
+    }
+
+    .slide-enter-to {
+        transform: translateY(0px);
+        opacity: 1.0;
+    }
+
+    .slide-enter {
+        transform: translateY(-100%);
+        opacity: 0;
     }
 </style>

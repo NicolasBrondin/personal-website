@@ -30,6 +30,10 @@
                         <fa icon="shopping-basket"/>
                         <span>{{$t('MENU_SHOP')}}</span>
                     </a>
+                    <a href="https://www.getrevue.co/profile/nicolas-brondin-bernard/members" v-if="$i18n.locale === 'fr'" target="_blank" class="bookmark">
+                        <fa icon="envelope"/>
+                        <span>Newsletter</span>
+                    </a>
                 </div>
                 <img class="card-bubble" src="~/assets/img/me-3.png"/>
                 <div id="thoughts">
