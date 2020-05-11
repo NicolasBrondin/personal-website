@@ -22,6 +22,10 @@
                         <fa icon="graduation-cap"/>
                         <span>{{$t('MENU_EDUCATION')}}</span>
                     </nuxt-link>
+                    <nuxt-link to="/newsletter" v-if="$i18n.locale === 'fr'" class="bookmark">
+                        <fa icon="envelope"/>
+                        <span>Newsletter</span>
+                    </nuxt-link>
                     <a href="https://blog.nicolas.brondin-bernard.com" target="_blank" class="bookmark">
                         <fa icon="newspaper"/>
                         <span>{{$t('MENU_BLOG')}}</span>
@@ -30,10 +34,7 @@
                         <fa icon="shopping-basket"/>
                         <span>{{$t('MENU_SHOP')}}</span>
                     </a>
-                    <a href="https://www.getrevue.co/profile/nicolas-brondin-bernard/members" v-if="$i18n.locale === 'fr'" target="_blank" class="bookmark">
-                        <fa icon="envelope"/>
-                        <span>Newsletter</span>
-                    </a>
+                    
                 </div>
                 <img class="card-bubble" src="~/assets/img/me-3.png"/>
                 <div id="thoughts">

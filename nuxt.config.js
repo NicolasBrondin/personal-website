@@ -47,7 +47,7 @@ module.exports = {
     ],
     modules: [
         ['@nuxtjs/google-analytics', {
-            id: 'UA-54530793-1',
+            id: process.env.NODE_ENV === 'production' ? 'UA-54530793-1' : 'UA-000000-1',
             disabled: false
         }],
         /*['nuxt-facebook-pixel-module', {
