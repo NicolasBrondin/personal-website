@@ -49,6 +49,7 @@
                                 title: this.$t('EDUCATION_CONFERENCE'),
                                 subtitle: this.$t('EDUCATION_CONFERENCE_TEXT'),
                                 type:"talk",
+                                url_text: this.$t("WATCH_EVENT"),
                                 cover: fortnite_cover
                             },
                             {

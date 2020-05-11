@@ -69,22 +69,14 @@
                         thumbnails: [
                             {
                                 cover: cover_wmd,
-                                url:"https://openclassrooms.com",
                                 title: this.$t('PROFESSIONAL_TITLE_ASSESSOR'),
-                                subtitle: [
-                                    this.$t('WEB_MOBILE_DEVELOPER'),
-                                    this.$t('LEVEL')+' III'
-                                ],
+                                subtitle: this.$t('WEB_MOBILE_DEVELOPER') + " - " + this.$t('LEVEL')+' III',
                                 type: 'accreditation'
                             },
                             {
                                 cover: cover_cda,
-                                url:"https://openclassrooms.com",
                                 title: this.$t('PROFESSIONAL_TITLE_ASSESSOR'),
-                                subtitle: [
-                                    this.$t('APPLICATION_DESIGNER_DEVELOPER'),
-                                    this.$t('LEVEL')+' IV'
-                                ],
+                                subtitle: this.$t('APPLICATION_DESIGNER_DEVELOPER')+" - "+this.$t('LEVEL')+' IV',
                                 type: 'accreditation'
                             }
                         ]
@@ -93,28 +85,24 @@
                         thumbnails: [
                             {
                                 cover: cover_psychology,
-                                url: "https://openclassrooms.com",
                                 title: this.$t('OC_CERTIFICATION'),
                                 subtitle: this.$t('OC_CERTIFICATION_PSYCHOLOGY'),
                                 logo: logo_oc
                             },
                             {
                                 cover: cover_design,
-                                url: "https://openclassrooms.com",
                                 title: this.$t('OC_CERTIFICATION'),
                                 subtitle: this.$t('OC_CERTIFICATION_DESIGN_THINKING'),
                                 logo: logo_oc
                             },
                             {
                                 cover: cover_social_networks,
-                                url: "https://openclassrooms.com",
                                 title: this.$t('OC_CERTIFICATION'),
                                 subtitle: this.$t('OC_CERTIFICATION_SOCIAL_NETWORKS'),
                                 logo: logo_oc
                             },
                             {
                                 cover: cover_bitcoin,
-                                url: "https://openclassrooms.com/fr/course-certificates/5823847131",
                                 title: this.$t('OC_CERTIFICATION'),
                                 subtitle: this.$t('OC_CERTIFICATION_BITCOIN'),
                                 logo: logo_oc
@@ -125,28 +113,24 @@
                         thumbnails: [
                             {
                                 cover: cover_master,
-                                url:"https://www.univ-nantes.fr/",
                                 title: this.$t('DEGREE_MASTER'),
                                 subtitle: this.$t('SOFTWARE_ARCHITECTURE'),
                                 logo: logo_nantes,
                             },
                             {
                                 cover: cover_entrepreneurship,
-                                url: "https://www.univ-nantes.fr/",
                                 title: this.$t('DEGREE_UNIVERSITY_DIPLOMA'),
                                 subtitle: this.$t('ENTREPRENEURSHIP'),
                                 logo: logo_nantes
                             },
                             {
                                 cover: cover_bachelor,
-                                url: "https://www.univ-larochelle.fr",
                                 title: this.$t('DEGREE_BACHELOR'),
                                 subtitle: this.$t('SOFTWARE_ENGINEERING'),
                                 logo: logo_lr
                             },
                             {
                                 cover: cover_computer,
-                                url: "https://www.univ-larochelle.fr",
                                 title: this.$t('DEGREE_UNIVERSITY_DIPLOMA'),
                                 subtitle: this.$t('COMPUTER_SCIENCE'),
                                 logo: logo_lr

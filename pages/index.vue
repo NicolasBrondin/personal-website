@@ -11,10 +11,10 @@
         <section>
             <flag :text="$t('NEWS')"/>
             <ul class="projects-list">
-                <thumbnail :data="card_data" v-for="(card_data, index) in sections.books.thumbnails" :key="index"/>
+                <thumbnail :data="card_data" v-for="(card_data, index) in sections.books.thumbnails" v-if="card_data" :key="index"/>
             </ul>
             <p>
-                <nuxt-link :to="localePath('projects')">{{$t('MORE_PROJECTS')}}</nuxt-link>
+                <nuxt-link class="btn" :to="localePath('projects')">{{$t('MORE_PROJECTS')}}</nuxt-link>
             </p>  
         </section>
         <section>
@@ -46,6 +46,7 @@
     import chess from "../components/chess.vue"
     import feedback from "../components/feedback.vue"
     import thumbnail from "../components/thumbnail.vue"
+    import cover_jaw from "@/assets/img/projects/jaw.jpg"
     import cover_fortnite from "@/assets/img/projects/conference.jpg"
     import cover_blog from "@/assets/img/projects/blog.jpg"
     import photo_pierre_tostain from "@/assets/img/feedbacks/pierre-tostain.png"
@@ -75,10 +76,20 @@
                 sections: {
                     books: {
                         thumbnails: [
+                            this.$i18n.locale === 'fr' ? {
+                                title: "JAW : De junior à warrior",
+                                is_featured: true,
+                                subtitle: "Newsletter destinée aux développeurs web débutants",
+                                url: "/newsletter/",
+                                cover: cover_jaw,
+                                type: "book"
+                            } : null,
                             {
                                 title: this.$t("FORTNITE"),
+                                is_featured: true,
                                 subtitle: this.$t("FORTNITE_DESCRIPTION"),
                                 url: "https://shop.brondin-bernard.com/produit/ebook-fortnite-a-t-il-transforme-nos-enfants-en-zombies/",
+                                url_text: this.$t("BUY"),
                                 cover: cover_fortnite,
                                 type: "book"
                             },
@@ -86,6 +97,7 @@
                                 title: "Blog",
                                 subtitle: this.$t("LAST_BLOG_POST"),
                                 url: this.$i18n.locale === 'fr' ? "https://blog.nicolas.brondin-bernard.com/last/fr/" : "https://blog.nicolas.brondin-bernard.com/last/en/",
+                                url_text: this.$t("READ"),
                                 cover: cover_blog,
                                 type: "web"
                             }

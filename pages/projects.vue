@@ -69,6 +69,7 @@
                                 url: "https://nicolas-brondin-bernard.itch.io/candy-candy-candy",
                                 title: "Candy Candy Candy",
                                 subtitle: this.$t("CANDY_DESCRIPTION"),
+                                url_text: this.$t("PLAY"),
                                 type: "game"
                             },
                             {
@@ -76,6 +77,7 @@
                                 url: "https://nicolasbrondin.github.io/scribee/",
                                 title: "Scribee",
                                 subtitle: this.$t("SCRIBEE_DESCRIPTION"),
+                                url_text: this.$t("PLAY"),
                                 type: "game"
                             },{
                                 cover: cover_flower_player,
@@ -96,6 +98,7 @@
                                 url: "/cv/index.html",
                                 title: this.$t("ONLINE_RESUME"),
                                 subtitle: this.$t("ONLINE_RESUME_DESCRIPTION"),
+                                url_text: this.$t("TRY"),
                                 type: "web"
                             }
                         ]
@@ -107,6 +110,7 @@
                                 url: "https://winesee.fr",
                                 title: this.$t("WINESEE"),
                                 subtitle: this.$t("WINESEE_DESCRIPTION"),
+                                url_text: this.$t("OPEN"),
                                 type: "web"
                             },
                             {
@@ -114,6 +118,7 @@
                                 url: "https://pro.winesee.fr",
                                 title: this.$t("WINESEE_PRO"),
                                 subtitle: this.$t("WINESEE_PRO_DESCRIPTION"),
+                                url_text: this.$t("OPEN"),
                                 type: "web"
                             },
                             {
@@ -121,6 +126,7 @@
                                 url: "https://klassroom.fr/",
                                 title: this.$t("KLASSROOM"),
                                 subtitle: this.$t("KLASSROOM_DESCRIPTION"),
+                                url_text: this.$t("OPEN"),
                                 type: "web"
                             },
                             {
@@ -128,6 +134,7 @@
                                 url: "https://app.klassroom.fr/",
                                 title: this.$t("KLASSROOM_WEB_APP"),
                                 subtitle: this.$t("KLASSROOM_WEB_APP_DESCRIPTION"),
+                                url_text: this.$t("OPEN"),
                                 type: "web"
                             },
                             {
@@ -135,6 +142,7 @@
                                 url: "https://chrome.google.com/webstore/detail/savings-radar-by-chdr/jpdgjenffbjdkdbgifemcdmomnnkjabk?hl=en-US",
                                 title: "Savings radar",
                                 subtitle: this.$t("CHDR_DESCRIPTION"),
+                                url_text: this.$t("OPEN"),
                                 type: "web"
                             }
                         ]

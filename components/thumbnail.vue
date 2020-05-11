@@ -1,18 +1,22 @@
 <template>
-    <li class="thumbnail" :class="{'disabled': data.is_finished}">
-        <div class="project-cover" :style="'background-image: url('+data.cover+')'"></div>
-        <div class="project-content">
+    <li class="thumbnail" >
+        <div class="thumbnail-cover" :style="'background-image: url('+data.cover+')'"></div>
+        <div class="thumbnail-content">
             <span class="badge" v-if="data.is_finished">{{$t('FINISHED')}}</span>
-            <a :href="data.url" target="_blank">{{data.title}} </a>
-            <p v-for="subtitle in subtitles" :key="subtitle">{{subtitle}}</p>
-            <img :src="data.logo" v-if="data.logo"/>
-            <img v-if="data.type === 'book'" src="~/assets/img/icons/book.svg"/>
-            <img v-if="data.type === 'talk'" src="~/assets/img/icons/microphone.svg"/>
-            <img v-if="data.type === 'dead'" src="~/assets/img/icons/grave.svg"/>
-            <img v-if="data.type === 'game'" src="~/assets/img/icons/gamepad.svg"/>
-            <img v-if="data.type === 'web'" src="~/assets/img/icons/web.svg"/>
-            <img v-if="data.type === 'accreditation'" src="~/assets/img/icons/id-card.svg"/>
-            <img v-if="data.type === 'electronics'" src="~/assets/img/icons/chip.svg"/>
+            <span class="badge" v-if="data.is_featured">{{$t('FEATURED')}}</span>
+            <p class="thumbnail-title">{{data.title}} </p>
+            <p class="thumbnail-description" v-for="subtitle in subtitles" :key="subtitle">{{subtitle}}</p>
+            <img class="thumbnail-icon" :src="data.logo" v-if="data.logo"/>
+            <img class="thumbnail-icon" v-if="data.type === 'book'" src="~/assets/img/icons/book.svg"/>
+            <img class="thumbnail-icon" v-if="data.type === 'talk'" src="~/assets/img/icons/microphone.svg"/>
+            <img class="thumbnail-icon" v-if="data.type === 'dead'" src="~/assets/img/icons/grave.svg"/>
+            <img class="thumbnail-icon" v-if="data.type === 'game'" src="~/assets/img/icons/gamepad.svg"/>
+            <img class="thumbnail-icon" v-if="data.type === 'web'" src="~/assets/img/icons/web.svg"/>
+            <img class="thumbnail-icon" v-if="data.type === 'accreditation'" src="~/assets/img/icons/id-card.svg"/>
+            <img class="thumbnail-icon" v-if="data.type === 'electronics'" src="~/assets/img/icons/chip.svg"/>
+            <div class="thumbnail-footer" v-if="data.url">
+                <a :href="data.url" target="_blank" class="btn primary">{{data.url_text || $t('DISCOVER')}}</a>
+            </div>
         </div>
     </li>
 </template>
@@ -29,7 +33,7 @@ export default {
 </script>
 
 <style scoped>
-
+/*
     .thumbnail {
         margin-bottom: 15px;
         width: 100%;
@@ -48,7 +52,7 @@ export default {
         font-weight: bold;
     }
 
-    .thumbnail .project-cover {
+    .thumbnail .thumbnail-cover {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -60,7 +64,7 @@ export default {
         opacity: 0.8;
         border-radius: 5px;
     }
-    .thumbnail .project-content {
+    .thumbnail .thumbnail-content {
         position: relative;
         z-index: 2;
         padding: 20px 20px;
@@ -117,5 +121,92 @@ export default {
     .thumbnail {
         font-size: 15px;
     }
-}
+    }*/
+
+    .thumbnail {
+        display: inline-block;
+        border-radius: 11px;
+        width: 100%;
+        max-width: 240px;
+        box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
+        text-align: left;
+        vertical-align: top;
+        margin: 10px;
+        
+        background: black;
+    }
+
+    .thumbnail-cover {
+        width: 100%;
+        height: 75px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        overflow: hidden;
+        opacity: 0.75;
+    }
+
+    .thumbnail .thumbnail-content {
+        position: relative;
+        padding: 20px;
+        background: white;
+        min-height: 120px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-sizing: border-box;
+        padding-bottom: 40px;
+    }
+
+    .thumbnail-icon {
+        height: 40px;
+        position: absolute;
+        top:-60px;
+        right: 0;
+        left:0;
+        margin: auto;
+    }
+
+    .thumbnail-footer {
+        position: absolute;
+        text-align: right;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .thumbnail .btn {
+        padding: 5px 10px;
+        font-size: 14px;
+        border-radius: 20px;
+        min-width: 50px;
+        text-align: center;
+    }
+
+    .thumbnail-title {
+        margin:0;
+        margin-bottom:5px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .thumbnail-description {
+        margin:0;
+        margin-bottom: 3px;
+        font-size: 14px;
+        color: rgba(0,0,0,0.5);
+    }
+
+    .thumbnail .badge {
+        position: absolute;
+        background: #f39c12;
+        border-radius: 20px;
+        color: white;
+        top:-10px;
+        left: 20px;
+        font-size: 12px;
+        height: 20px;
+        padding: 0px 20px;
+        line-height: 20px;
+    }
 </style>
