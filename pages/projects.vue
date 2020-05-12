@@ -47,15 +47,15 @@
     export default {
         head: function(){
             return {
-                title: this.$t("META_INDEX_TITLE"),
+                title: this.$t("META_PROJECTS_TITLE"),
                 meta: [
-                    { hid: "twitter:title", name: "twitter:title", content: this.$t("META_INDEX_TITLE")},
-                    { hid: "twitter:text:title", name: "twitter:text:title", content: this.$t("META_INDEX_TITLE")},
-                    { hid: "og:title", name: "og:title", content: this.$t("META_INDEX_TITLE")},
-                    { hid: "description", name: "description", content: this.$t("META_INDEX_DESCRIPTION")},
-                    { hid: "og:description", name: "og:description", content: this.$t("META_INDEX_DESCRIPTION")},
-                    { hid: "twitter:description", name: "twitter:description", content: this.$t("META_INDEX_DESCRIPTION")},
-                    { hid: "keywords", name: "keywords", content: this.$t("META_INDEX_KEYWORDS")}
+                    { hid: "twitter:title", name: "twitter:title", content: this.$t("META_PROJECTS_TITLE")},
+                    { hid: "twitter:text:title", name: "twitter:text:title", content: this.$t("META_PROJECTS_TITLE")},
+                    { hid: "og:title", name: "og:title", content: this.$t("META_PROJECTS_TITLE")},
+                    { hid: "description", name: "description", content: this.$t("META_PROJECTS_DESCRIPTION")},
+                    { hid: "og:description", name: "og:description", content: this.$t("META_PROJECTS_DESCRIPTION")},
+                    { hid: "twitter:description", name: "twitter:description", content: this.$t("META_PROJECTS_DESCRIPTION")},
+                    { hid: "keywords", name: "keywords", content: this.$t("META_PROJECTS_KEYWORDS")}
                 ]
             };
         },

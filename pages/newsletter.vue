@@ -26,14 +26,15 @@
     export default {
         head: function(){
             return {
-                title: this.$t("META_INDEX_TITLE"),
+                title: this.$t("META_NEWSLETTER_TITLE"),
                 meta: [
-                    { hid: "twitter:title", name: "twitter:title", content: "De junior à warrior : la newsletter pour les nouveaux développeurs web"},
-                    { hid: "twitter:text:title", name: "twitter:text:title", content: "De junior à warrior : la newsletter pour les nouveaux développeurs web"},
-                    { hid: "og:title", name: "og:title", content: "De junior à warrior : la newsletter pour les nouveaux développeurs web"},
-                    { hid: "description", name: "description", content: "Deviens membre de la newsletter et reçois un email tous les mardis à 8h00. Je te partage mes conseils (tech, recrutement, soft skills, gestion de projet,...) pour t'aider à progresser !"},
-                    { hid: "og:description", name: "og:description", content: "Deviens membre de la newsletter et reçois un email tous les mardis à 8h00. Je te partage mes conseils (tech, recrutement, soft skills, gestion de projet,...) pour t'aider à progresser !"},
-                    { hid: "twitter:description", name: "twitter:description", content: "Deviens membre de la newsletter et reçois un email tous les mardis à 8h00. Je te partage mes conseils (tech, recrutement, soft skills, gestion de projet,...) pour t'aider à progresser !"},
+                    { hid: "twitter:title", name: "twitter:title", content: this.$t("META_NEWSLETTER_TITLE")},
+                    { hid: "twitter:text:title", name: "twitter:text:title", content: this.$t("META_NEWSLETTER_TITLE")},
+                    { hid: "og:title", name: "og:title", content: this.$t("META_NEWSLETTER_TITLE")},
+                    { hid: "description", name: "description", content: this.$t("META_NEWSLETTER_DESCRIPTION")},
+                    { hid: "og:description", name: "og:description", content: this.$t("META_NEWSLETTER_DESCRIPTION")},
+                    { hid: "twitter:description", name: "twitter:description", content: this.$t("META_NEWSLETTER_DESCRIPTION")},
+                    { hid: "keywords", name: "keywords", content: this.$t("META_NEWSLETTER_KEYWORDS")},
                     { hid: "twitter:image", name: "twitter:image", content: "https://nicolas.brondin-bernard.com/cover-newsletter.jpg?t=1" },
                     { hid: "og:image", name: "og:image", content: "https://nicolas.brondin-bernard.com/cover-newsletter.jpg?t=1" }
                 ]

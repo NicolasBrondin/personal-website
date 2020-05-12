@@ -6,7 +6,7 @@
             <img class="balloon" v-if="$route.path === '/'" src="~/assets/img/hot-air-balloon.svg"/>
             <div class="card">
                 <div class="bookmark-container">
-                    <nuxt-link :to="localePath('/')" exact class="bookmark">
+                    <nuxt-link :to="localePath('index')" exact class="bookmark">
                         <fa icon="home"/>
                         <span>{{$t('MENU_HOME')}}</span>
                     </nuxt-link>
@@ -53,10 +53,13 @@
                     </h1>
                     <h2>{{$t('TITLE')}}</h2>
                     <h3>
+                        <span>{{$t('WEB_DEVELOPER')}}</span> 
                         <span>{{$t('CITY')}}</span> 
                         <!--<span>{{$t('CO_FOUNDER')}}</span> -->
                         <span>{{$t('AUTHOR')}}</span> 
+                        <span>{{$t('BLOGGER')}}</span> 
                         <span>{{$t('STREAMER')}}</span> 
+                        <span>{{$t('SPEAKER')}}</span> 
                         <span>{{$t('HUSBAND')}}</span> 
                         <span>{{$t('FATHER')}}</span>
                     </h3>
