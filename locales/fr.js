@@ -110,4 +110,7 @@ module.exports = {
     META_NEWSLETTER_TITLE: "La newsletter spécialisée pour les développeurs web débutants - Nicolas Brondin-Bernard",
     META_NEWSLETTER_DESCRIPTION: "JAW : de Junior à Warrior est une newsletter premium dans laquelle les développeurs reçoivent un conseil spécialisé par semaine pour optimiser leur potentiel.",
     META_NEWSLETTER_KEYWORDS: "Nicolas Brondin-Bernard, Newsletter, Conseil, Conseils, Développeur, Développeur web, Développeur web débutant",
+    META_FORTNITE_TITLE: "Fortnite a-t-il transformé nos enfants en zombies ? - Livre - Nicolas Brondin-Bernard",
+    META_FORTNITE_DESCRIPTION: "Ce livre (Le guide complet pour parents démunis) est un ouvrage de vulgarisation du marché du jeu vidéo, de game design et de psychologie accessible à tous afin de mieux comprendre le monde vidéo-ludique qui nous entoure.",
+    META_FORTNITE_KEYWORDS: "Nicolas Brondin-Bernard, Livre, Fortnite, Education, Game Design, Psychologie, Jeux vidéo, Jeu vidéo, Addiction",
 }

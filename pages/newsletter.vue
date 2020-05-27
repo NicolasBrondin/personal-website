@@ -35,8 +35,8 @@
                     { hid: "og:description", name: "og:description", content: this.$t("META_NEWSLETTER_DESCRIPTION")},
                     { hid: "twitter:description", name: "twitter:description", content: this.$t("META_NEWSLETTER_DESCRIPTION")},
                     { hid: "keywords", name: "keywords", content: this.$t("META_NEWSLETTER_KEYWORDS")},
-                    { hid: "twitter:image", name: "twitter:image", content: "https://nicolas.brondin-bernard.com/cover-newsletter.jpg?t=1" },
-                    { hid: "og:image", name: "og:image", content: "https://nicolas.brondin-bernard.com/cover-newsletter.jpg?t=1" }
+                    { hid: "twitter:image", name: "twitter:image", content: "https://nicolas.brondin-bernard.com/cover-newsletter.jpg?t=3" },
+                    { hid: "og:image", property: "og:image", name: "og:image", content: "https://nicolas.brondin-bernard.com/cover-newsletter.jpg?t=3" }
                 ]
             };
         },
