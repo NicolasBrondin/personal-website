@@ -55,8 +55,7 @@
                 this.$ga.event({
                     eventCategory: 'outbound',
                     eventAction: 'click',
-                    eventLabel: 'Amazon',
-                    eventValue: url
+                    eventLabel: url
                 });
             },
             show_love: function(){

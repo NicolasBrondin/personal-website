@@ -34,6 +34,9 @@ module.exports = {
             { hid: "og:description", name: "og:description", content: "Kalico co-founder, streamer on Twitch, proud husband, based in Tours, France." },
             { hid: "twitter:description", name: "twitter:description", content: "Kalico co-founder, streamer on Twitch, proud husband, based in Tours, France." }
         ],
+        script: [
+            {src: "https://nicolasbrondin.github.io/cookie-consent/dist/main.js"}
+        ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
             { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,400,300italic,700', type: 'text/css' },

@@ -136,6 +136,14 @@
                 enigma_step: -1
             }
         },
+        mounted: function(){
+            new CookieConsent(function(){
+                this.$ga.enable()
+            }.bind(this),
+            function(){
+                this.$ga.disable();
+            }.bind(this));
+        },
         methods: {
             show_enigma: function(){
                         var event = new CustomEvent('show_popup',{});
