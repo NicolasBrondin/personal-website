@@ -4,14 +4,14 @@
             <flag text="Livre"/>
             <h1>Fortnite a-t-il transformé nos enfants en zombies ?</h1>
             <h2>Le guide complet pour parents démunis</h2>
-            <a class="btn primary" href="https://www.amazon.fr/dp/B08929ZCPK" target="_blank">Acheter le livre <img src="@/assets/img/icons/shopping-cart.svg" height="20"/></a>
+            <a class="btn primary" @click="captureOutboundLink('https://www.amazon.fr/dp/B08929ZCPK');" href="https://www.amazon.fr/dp/B08929ZCPK" target="_blank">Acheter le livre <img src="@/assets/img/icons/shopping-cart.svg" height="20"/></a>
             <p class="newsletter-price" style="margin-bottom: 0px;">version papier à 9,99€</p>
             <div><img src="@/assets/img/books/fortnite.png" width="300"/></div>
             <p><strong>Vous n'en pouvez plus d'entendre parler de Fortnite</strong> toute la journée depuis des mois ?</p>
             <p>Vous avez l'impression que votre enfant est un zombie <strong>accroc aux jeux vidéo</strong> ? </p>
             <p>Nous allons découvrir ensemble quelles sont <strong>les raisons et les mécaniques qui poussent les enfants à jouer autant</strong>, tout en explorant les nombreuses <strong>solutions</strong> que vous pourrez mettre en place facilement pour <strong>calmer les tensions familiales</strong>.</p>
             <p>Ce livre est un ouvrage de vulgarisation du marché du jeu vidéo, de game design et de psychologie <strong>accessible à tous</strong> afin de mieux comprendre le monde vidéo-ludique qui nous entoure.</p>
-            <a class="btn primary" href="https://www.amazon.fr/dp/B08929ZCPK" target="_blank">Acheter le livre <img src="@/assets/img/icons/shopping-cart.svg" height="20"/></a>
+            <a class="btn primary" @click="captureOutboundLink('https://www.amazon.fr/dp/B08929ZCPK');" href="https://www.amazon.fr/dp/B08929ZCPK" target="_blank">Acheter le livre <img src="@/assets/img/icons/shopping-cart.svg" height="20"/></a>
             <p class="newsletter-price">disponible sur Amazon</p>
             
             <img src="@/assets/img/ssl.png" height="30">
@@ -51,6 +51,14 @@
             "flag": flag
         },
         methods: {
+            captureOutboundLink: function(url) {
+                this.$ga.event({
+                    eventCategory: 'outbound',
+                    eventAction: 'click',
+                    eventLabel: 'Amazon',
+                    eventValue: url
+                });
+            },
             show_love: function(){
                 this.love = true;
             }
