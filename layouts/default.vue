@@ -157,3 +157,29 @@
         }
     }
 </script>
+
+<style scoped>
+.page {
+    
+    padding-top: 150px;
+}
+    .card {
+        padding-top: 75px;
+    }
+    @media screen and (max-width: 800px){
+    .card {
+        padding: 20px;    
+    }
+    }
+    @media screen and (max-width: 720px){
+        .card{
+            
+            margin-left: 20px;
+        }
+    }
+    @media screen and (max-width: 350px){
+    .card{
+        padding: 20px;
+    }
+}
+</style>

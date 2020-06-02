@@ -14,7 +14,6 @@ html, body {
     padding: 40px;
     box-sizing: border-box;
     min-height: 100vh;
-    padding-top: 150px;
     overflow-x: hidden;
     margin: auto;
 }
@@ -125,6 +124,7 @@ a {
     font-family: Roboto;
     font-size: 16px;
     //box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
 }
 
 .btn.primary {
@@ -146,7 +146,6 @@ a {
     text-align: center;
     position: relative;
     padding: 40px;
-    padding-top: 75px;
     box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
     width: 100%;
     box-sizing: border-box;
@@ -255,10 +254,7 @@ footer p {
 }
 
 @media screen and (max-width: 800px){
-    .card {
-        padding: 20px;    
-        padding-top: 75px;
-    }
+    
     
     .balloon {
         right: -10px;
@@ -272,18 +268,9 @@ footer p {
 }
 
 @media screen and (max-width: 720px){
-    .card{
-        
-        margin-left: 20px;
-    }
+   
     #thoughts {
         display: none;
 }
     
-}
-@media screen and (max-width: 350px){
-    .card{
-        padding: 20px;
-        padding-top: 50px;
-    }
 }

@@ -1,7 +1,7 @@
 <template>
     <div class="page-content">
         <section>
-            <h1>Livre : Fortnite a-t-il transformé nos enfants en zombies ?</h1>
+            <h1>Fortnite a-t-il transformé nos enfants en zombies ?</h1>
             <h2>Le guide complet pour parents démunis</h2>
             
             <div>
@@ -58,7 +58,6 @@
     import flag from "../../components/flag.vue"
     
     export default {
-        layout: 'product',
         head: function(){
             return {
                 title: this.$t("META_FORTNITE_TITLE"),

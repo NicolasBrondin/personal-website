@@ -88,7 +88,7 @@
                                 title: this.$t("FORTNITE"),
                                 is_featured: true,
                                 subtitle: this.$t("FORTNITE_DESCRIPTION"),
-                                url: "/books/fortnite-a-t-il-transforme-nos-enfants-en-zombies/",
+                                url: "/projects/fortnite",
                                 url_text: this.$t("BUY"),
                                 cover: cover_fortnite,
                                 type: "book"
