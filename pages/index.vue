@@ -48,6 +48,7 @@
     import thumbnail from "../components/thumbnail.vue"
     import cover_jaw from "@/assets/img/projects/jaw.jpg"
     import cover_fortnite from "@/assets/img/projects/conference.jpg"
+    import cover_technical_ninja from "@/assets/img/projects/technical-ninja.jpg"
     import cover_blog from "@/assets/img/projects/blog.jpg"
     import photo_pierre_tostain from "@/assets/img/feedbacks/pierre-tostain.png"
     import photo_mina_tostain from "@/assets/img/feedbacks/mina-tostain.jpg"
@@ -76,19 +77,29 @@
                 sections: {
                     books: {
                         thumbnails: [
-                            this.$i18n.locale === 'fr' ? {
-                                title: "JAW : De junior à warrior",
+                            {
+                                title: this.$t("TECHNICAL_NINJA"),
                                 is_featured: true,
-                                subtitle: "Newsletter destinée aux développeurs web débutants",
+                                subtitle: this.$t("TECHNICAL_NINJA_DESCRIPTION"),
+                                url: "https://technical-ninja.cleverapps.io/",
+                                url_text: this.$t("TRY"),
+                                cover: cover_technical_ninja,
+                                type: "web"
+                            },
+                            this.$i18n.locale === 'fr' ? {
+                                title: "Ma newsletter",
+                                is_featured: true,
+                                subtitle: "Newsletter pour les développeurs web",
                                 url: "/newsletter/",
                                 cover: cover_jaw,
                                 type: "book"
                             } : null,
+                            
                             {
                                 title: this.$t("FORTNITE"),
-                                is_featured: true,
+                                is_featured: false,
                                 subtitle: this.$t("FORTNITE_DESCRIPTION"),
-                                url: "/projects/fortnite",
+                                url: "/project/fortnite",
                                 url_text: this.$t("BUY"),
                                 cover: cover_fortnite,
                                 type: "book"
@@ -96,7 +107,7 @@
                             {
                                 title: "Blog",
                                 subtitle: this.$t("LAST_BLOG_POST"),
-                                url: this.$i18n.locale === 'fr' ? "https://blog.nicolas.brondin-bernard.com/last/fr/" : "https://blog.nicolas.brondin-bernard.com/last/en/",
+                                url: this.$i18n.locale === 'fr' ? "https://blog.nicolas.brondin-bernard.com/tag/francais/" : "https://blog.nicolas.brondin-bernard.com/tag/english/",
                                 url_text: this.$t("READ"),
                                 cover: cover_blog,
                                 type: "web"

@@ -1,9 +1,7 @@
 <template>
     <div class="page-content">
         <section>
-            <h1>Fortnite a-t-il transformé nos enfants en zombies ?</h1>
-            <h2>Le guide complet pour parents démunis</h2>
-            
+            <flag text="Livre"/>
             <div>
                 <a @click="captureOutboundLink('https://www.amazon.fr/dp/B08929ZCPK');" href="https://www.amazon.fr/dp/B08929ZCPK" target="_blank">
                     <img id="book-cover" src="@/assets/img/books/fortnite.png"/>
@@ -41,13 +39,6 @@
                 <img src="@/assets/img/ssl.png" height="30">
                 <img src="@/assets/img/credit-cards.jpg" height="30">
             </div>
-        </section>
-        <hr>
-        <section>
-           <h1>A propos de l'auteur</h1>
-           <h2>Nicolas Brondin-Bernard</h2>
-           <img src="~/assets/img/me-3.png" style="border-radius: 50%;margin-top: 20px;" width="100"/>
-           <p style="text-align: center;">Ingénieur en informatique et développeur de jeux vidéo passionné par la psychologie ainsi que l'éducation, j'ai décidé d'écrire ce livre pour aider un maximum de parents à comprendre le monde vidéo-ludique qui nous entoure.</p>
         </section>
     </div>
 </template>
@@ -97,7 +88,7 @@
     }
 </script>
 
-<style>
+<style scoped>
 
 h1 {
     font-weight: bold;
