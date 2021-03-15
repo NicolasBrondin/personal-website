@@ -2,8 +2,8 @@
     <main>
         <popup-manager/>
         <div class="page">
-            <img class="plane" src="~/assets/img/plane.svg" @click="show_enigma()"/>
-            <img class="balloon" v-if="$route.path === '/'" src="~/assets/img/hot-air-balloon.svg"/>
+            <img alt="Avion volant" class="plane" src="~/assets/img/plane.svg" @click="show_enigma()"/>
+            <img alt="Ballon dirigeable qui vole" class="balloon" v-if="$route.path === '/'" src="~/assets/img/hot-air-balloon.svg"/>
             <div class="card">
                 <div class="bookmark-container">
                     <nuxt-link :to="localePath('index')" exact class="bookmark">
@@ -19,32 +19,40 @@
                         <span>{{$t('MENU_TALKS')}}</span>
                     </nuxt-link>
                     <nuxt-link :to="localePath('education')" exact class="bookmark">
-                        <fa icon="graduation-cap"/>
+                        <fa icon="award"/>
                         <span>{{$t('MENU_EDUCATION')}}</span>
                     </nuxt-link>
                     <nuxt-link to="/newsletter" v-if="$i18n.locale === 'fr'" class="bookmark">
                         <fa icon="envelope"/>
                         <span>Newsletter</span>
                     </nuxt-link>
-                    <a href="https://blog.nicolas.brondin-bernard.com" target="_blank" class="bookmark">
+                    <a href="https://blog.nicolas.brondin-bernard.com" v-if="$i18n.locale === 'fr'" target="_blank" class="bookmark">
                         <fa icon="newspaper"/>
                         <span>{{$t('MENU_BLOG')}}</span>
                     </a>
-                    <a href="https://shop.brondin-bernard.com" target="_blank" class="bookmark">
+                    <a href="https://blog.nicolas.brondin-bernard.com/en/" v-if="$i18n.locale === 'en'" target="_blank" class="bookmark">
+                        <fa icon="newspaper"/>
+                        <span>{{$t('MENU_BLOG')}}</span>
+                    </a>
+                    <a href="https://masterclass.nicolas.brondin-bernard.com" v-if="$i18n.locale === 'fr'" target="_blank" class="bookmark is-featured">
+                        <fa icon="graduation-cap"/>
+                        <span>{{$t('MENU_MASTERCLASS')}}</span>
+                    </a>
+                    <a href="https://shop.brondin-bernard.com" v-if="$i18n.locale === 'fr'" target="_blank" class="bookmark">
                         <fa icon="shopping-basket"/>
                         <span>{{$t('MENU_SHOP')}}</span>
                     </a>
                     
                 </div>
-                <img class="card-bubble" src="~/assets/img/me-3.png"/>
+                <img alt="Photo Nicolas" class="card-bubble" src="~/assets/img/me-3.png"/>
                 <div id="thoughts">
                     <span>{{$t("ENIGMA")}}</span>
                 </div>
                 <nuxt-link class="flag-lang lang-fr" :class="{'is-current': $i18n.locale =='fr'}" :to="switchLocalePath('fr')">
-                    <img src="~/assets/img/flags/fr.png"/>
+                    <img alt="Drapeau français" src="~/assets/img/flags/fr.png"/>
                 </nuxt-link>
                 <nuxt-link class="flag-lang lang-en" :class="{'is-current': $i18n.locale =='en'}" :to="switchLocalePath('en')">
-                    <img src="~/assets/img/flags/en.png"/>
+                    <img alt="English flag" src="~/assets/img/flags/en.png"/>
                 </nuxt-link>
                 <section>
                     <h1>
@@ -94,27 +102,27 @@
                 <hr>
                 <section>
                     <ul class="list-links">
-                        <li><a target="_blank" href="https://www.facebook.com/nicolasbrondinbernard/"><img src="~/assets/img/social/facebook.svg"/></a></li>
-                        <li><a target="_blank" href="https://www.instagram.com/nicolas_brondin_bernard/"><img src="~/assets/img/social/instagram.png"/></a></li>
-                        <li><a target="_blank" href="https://www.twitter.com/NicolasBrondin"><img src="~/assets/img/social/twitter.svg"/></a></li>
-                        <li><a target="_blank" href="https://www.twitch.tv/nicolasbrondinbernard"><img src="~/assets/img/social/twitch.png"/></a></li>
-                        <li><a target="_blank" href="https://www.linkedin.com/in/nicolas-brondin"><img src="~/assets/img/social/linkedin.svg"/></a></li>
-                        <li><a target="_blank" href="https://blog.nicolas.brondin-bernard.com"><img src="~/assets/img/social/medium.svg"/></a></li>
-                        <li><a target="_blank" href="https://dribbble.com/NicolasBrondin"><img src="~/assets/img/social/dribbble.svg"/></a></li>
-                        <li><a target="_blank" href="https://www.producthunt.com/@nicolasbrondin"><img src="~/assets/img/social/product-hunt.png"/></a></li>
-                        <li><a target="_blank" href="https://github.com/NicolasBrondin"><img src="~/assets/img/social/github.svg"/></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/nicolasbrondinbernard/"><img alt="Facebook" src="~/assets/img/social/facebook.svg"/></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/nicolas_brondin_bernard/"><img alt="Instagram" src="~/assets/img/social/instagram.png"/></a></li>
+                        <li><a target="_blank" href="https://www.twitter.com/NicolasBrondin"><img alt="Twitter" src="~/assets/img/social/twitter.svg"/></a></li>
+                        <li><a target="_blank" href="https://www.twitch.tv/nicolasbrondinbernard"><img alt="Twitch" src="~/assets/img/social/twitch.png"/></a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/in/nicolas-brondin"><img alt="Linkedin" src="~/assets/img/social/linkedin.svg"/></a></li>
+                        <li><a target="_blank" href="https://blog.nicolas.brondin-bernard.com"><img alt="Medium" src="~/assets/img/social/medium.svg"/></a></li>
+                        <li><a target="_blank" href="https://dribbble.com/NicolasBrondin"><img alt="Dribbble" src="~/assets/img/social/dribbble.svg"/></a></li>
+                        <li><a target="_blank" href="https://www.producthunt.com/@nicolasbrondin"><img alt="Product Hunt" src="~/assets/img/social/product-hunt.png"/></a></li>
+                        <li><a target="_blank" href="https://github.com/NicolasBrondin"><img alt="Github" src="~/assets/img/social/github.svg"/></a></li>
                         <li>
-                            <a target="_blank" href="https://www.malt.fr/profile/nicolasbrondin"><img src="~/assets/img/social/malt.png"/></a>
+                            <a target="_blank" href="https://www.malt.fr/profile/nicolasbrondin"><img alt="Malt" src="~/assets/img/social/malt.png"/></a>
                             <div class="arrow-tip">
                                 <div class="arrow-tip--container">
                                     <p class="arrow-tip--text">{{$t("HOW_MUCH")}}</p>
-                                    <img src="~/assets/img/icons/semicircular-up-arrow.svg" class="arrow-tip--icon"/>
+                                    <img alt="Flèche" src="~/assets/img/icons/semicircular-up-arrow.svg" class="arrow-tip--icon"/>
                                 </div>
                             </div>
                         </li>
                         
                     </ul>
-                    <a class="btn" href="mailto:nicolas@brondin.com">{{$t('SHOOT_EMAIL')}}<img src="~/assets/img/icons/paper-plane.svg" height="20"/></a>
+                    <a class="btn" href="mailto:nicolas@brondin.com">{{$t('SHOOT_EMAIL')}}<img alt="Icône d'avion en papier" src="~/assets/img/icons/paper-plane.svg" height="20"/></a>
                 </section>
                 <footer>
                     <p>{{$t('FUN_FACT')}}</p>
@@ -159,27 +167,32 @@
 </script>
 
 <style scoped>
-.page {
-    
-    padding-top: 150px;
-}
+
+    .page { 
+        padding-top: 150px;
+    }
+
     .card {
         padding-top: 75px;
     }
+
     @media screen and (max-width: 800px){
-    .card {
-        padding: 20px;    
+        .card {
+            padding: 20px;   
+            padding-top: 75px; 
+        }
     }
-    }
+
     @media screen and (max-width: 720px){
-        .card{
-            
+        .card{ 
             margin-left: 20px;
         }
     }
+
     @media screen and (max-width: 350px){
     .card{
         padding: 20px;
+        padding-top: 75px;
     }
 }
 </style>

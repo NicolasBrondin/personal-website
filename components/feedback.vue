@@ -1,6 +1,6 @@
 <template>
     <div class="feedback">
-        <img :src="data.photo"/>
+        <img alt="photo" :src="data.photo"/>
         <div class="feedback-content">
             
             <p class="feedback-author-name">{{data.name}}</p>

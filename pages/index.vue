@@ -1,10 +1,14 @@
 <template>
     <div class="page-content">
         <section v-if="$i18n.locale === 'fr'">
+            <h4>En tant que développeur :</h4>
             <p style="text-align: justify;">J'accompagne les <strong>entreprises de toutes tailles</strong> dans leurs projets numériques en apportant mon expertise sur le <strong>développement web</strong>, ou bien en pilotant le projet de <strong>A à Z</strong>.</p>
             <p style="text-align: justify;">De la phase d'idéation jusqu'au <strong>déploiement</strong>, en passant par la réalisation des maquettes graphiques et l'accompagnement sur <strong>l'expérience utilisateur</strong>, je prends soin de vos projets. </p>
+            <h4>En tant que formateur :</h4>
+            <p style="text-align: justify;">Je crée du contenu gratuit <a href="https://blog.nicolas.brondin-bernard.com" style="color: black; font-weight: bold;" target="_blank">sur mon blog</a> consulté par des milliers de développeurs chaque mois, ainsi que <a style="color: black; font-weight: bold;" href="https://masterclass.nicolas.brondin-bernard.com" target="_blank">des masterclasses</a> afin d'aider les juniors dans leurs aventures pour <strong>devenir des développeurs seniors.</strong></p>
         </section>
         <section v-if="$i18n.locale === 'en'">
+            <h4>As a developer :</h4>
             <p style="text-align: justify;">I help companies of <strong>any sizes</strong> with their digital projects by bringing a <strong>web development expertise</strong>, or by driving the project from <strong>A to Z</strong>.</p>
             <p style="text-align: justify;">From the ideation phase to <strong>deployment</strong>, also doing graphic design and working on <strong>user experience</strong>, I take care of your projects. </p>
         </section>
@@ -20,16 +24,16 @@
         <section>
             <flag :text="$t('COLLABORATION')"/>
             <div class="well">
-                <a class="customer"><img src="@/assets/img/customers/klassroom.png"/></a>
-                <a class="customer"><img src="@/assets/img/customers/my-serious-game.png"/></a>
-                <a class="customer"><img src="@/assets/img/customers/prototyper.png"/></a>
-                <a class="customer"><img src="@/assets/img/customers/domitys.jpg"/></a>
-                <a class="customer"><img src="@/assets/img/customers/winesee.png"/></a>
-                <a class="customer"><img src="@/assets/img/customers/sanofi.jpg"/></a>
-                <a class="customer"><img src="@/assets/img/customers/carrefour.jpg"/></a>
-                <a class="customer"><img src="@/assets/img/customers/systeme-u.png"/></a>
-                <a class="customer"><img src="@/assets/img/customers/bouygues-construction.png"/></a>
-                <a class="customer"><img src="@/assets/img/customers/ministere-interieur.jpg"/></a>
+                <a class="customer"><img alt="Klassroom" src="@/assets/img/customers/klassroom.png"/></a>
+                <a class="customer"><img alt="My Serious Game" src="@/assets/img/customers/my-serious-game.png"/></a>
+                <a class="customer"><img alt="Prototyper" src="@/assets/img/customers/prototyper.png"/></a>
+                <a class="customer"><img alt="Domitys" src="@/assets/img/customers/domitys.jpg"/></a>
+                <a class="customer"><img alt="Winesee" src="@/assets/img/customers/winesee.png"/></a>
+                <a class="customer"><img alt="Sanofi" src="@/assets/img/customers/sanofi.jpg"/></a>
+                <a class="customer"><img alt="Carrefour" src="@/assets/img/customers/carrefour.jpg"/></a>
+                <a class="customer"><img alt="Système U" src="@/assets/img/customers/systeme-u.png"/></a>
+                <a class="customer"><img alt="Bouygues Construction" src="@/assets/img/customers/bouygues-construction.png"/></a>
+                <a class="customer"><img alt="Ministère de l'intérieur" src="@/assets/img/customers/ministere-interieur.jpg"/></a>
             </div>
             <div class="feedbacks">
                 <transition-group name="slide" mode="out-in">
@@ -50,6 +54,7 @@
     import cover_fortnite from "@/assets/img/projects/conference.jpg"
     import cover_technical_ninja from "@/assets/img/projects/technical-ninja.jpg"
     import cover_blog from "@/assets/img/projects/blog.jpg"
+    import cover_masterclass from "@/assets/img/projects/masterclass.jpg"
     import photo_pierre_tostain from "@/assets/img/feedbacks/pierre-tostain.png"
     import photo_mina_tostain from "@/assets/img/feedbacks/mina-tostain.jpg"
     import photo_slyvain_guiheneuc from "@/assets/img/feedbacks/sylvain-guiheneuc.jpg"
@@ -77,15 +82,15 @@
                 sections: {
                     books: {
                         thumbnails: [
-                            {
-                                title: this.$t("TECHNICAL_NINJA"),
-                                is_featured: true,
-                                subtitle: this.$t("TECHNICAL_NINJA_DESCRIPTION"),
-                                url: "https://technical-ninja.cleverapps.io/",
-                                url_text: this.$t("TRY"),
-                                cover: cover_technical_ninja,
-                                type: "web"
-                            },
+                            this.$i18n.locale === 'fr' ? {
+                                title: "Masterclass 49,50€ (-50%)",
+                                is_offer: true,
+                                subtitle: "Décrocher un job en tant que développeur web (4h)",
+                                url: "https://masterclass.nicolas.brondin-bernard.com/decroche-ton-premier-job-en-tant-que-developpeur-junior?coupon=JEVEUXUNJOB",
+                                url_text: "Découvrir",
+                                cover: cover_masterclass,
+                                type: "course"
+                            } : null,
                             this.$i18n.locale === 'fr' ? {
                                 title: "Ma newsletter",
                                 is_featured: true,
@@ -94,20 +99,10 @@
                                 cover: cover_jaw,
                                 type: "book"
                             } : null,
-                            
-                            {
-                                title: this.$t("FORTNITE"),
-                                is_featured: false,
-                                subtitle: this.$t("FORTNITE_DESCRIPTION"),
-                                url: "/project/fortnite",
-                                url_text: this.$t("BUY"),
-                                cover: cover_fortnite,
-                                type: "book"
-                            },
                             {
                                 title: "Blog",
                                 subtitle: this.$t("LAST_BLOG_POST"),
-                                url: this.$i18n.locale === 'fr' ? "https://blog.nicolas.brondin-bernard.com/tag/francais/" : "https://blog.nicolas.brondin-bernard.com/tag/english/",
+                                url: this.$i18n.locale === 'fr' ? "https://blog.nicolas.brondin-bernard.com/" : "https://blog.nicolas.brondin-bernard.com/en",
                                 url_text: this.$t("READ"),
                                 cover: cover_blog,
                                 type: "web"

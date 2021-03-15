@@ -4,16 +4,16 @@
             <flag text="Livre"/>
             <div>
                 <a @click="captureOutboundLink('https://www.amazon.fr/dp/B08929ZCPK');" href="https://www.amazon.fr/dp/B08929ZCPK" target="_blank">
-                    <img id="book-cover" src="@/assets/img/books/fortnite.png"/>
+                    <img alt="Couverture du livre" id="book-cover" src="@/assets/img/books/fortnite.png"/>
                 </a>
             </div>
             
             <p><strong>Vous n'en pouvez plus d'entendre parler de Fortnite</strong> toute la journée ?</p> 
             <p>Vous avez l'impression que votre enfant est devenu <strong>accroc aux jeux vidéo</strong> ? </p>
             <p><strong>Vous ne savez plus quoi faire</strong> pour retrouver le calme et la sérénité à la maison ? </p>
-            <img src="@/assets/img/teenager.svg" class="illustration-teenager"/>
-            <img src="@/assets/img/random.svg" class="illustration-arrow"/>
-            <img src="@/assets/img/teenager-2.svg" class="illustration-teenager"/>
+            <img alt="Adolescent blasé" src="@/assets/img/teenager.svg" class="illustration-teenager"/>
+            <img alt="Flèche" src="@/assets/img/random.svg" class="illustration-arrow"/>
+            <img alt="Adolescent content" src="@/assets/img/teenager-2.svg" class="illustration-teenager"/>
             <h1>Rejoignez le club des parents apaisés !</h1>
             
             <p>Grâce à ce livre, vous retrouverez <strong>une relation stable avec votre enfant</strong>.</p>

@@ -40,6 +40,7 @@
     import cover_cocaine_video from "@/assets/img/projects/cocaine-video.jpg"
     import cover_eurekube from "@/assets/img/projects/eurekube.jpg"
     import cover_technical_ninja from "@/assets/img/projects/technical-ninja.jpg"
+    import cover_parentalite from "@/assets/img/projects/parentalite.jpg"
 
     import flag from "../components/flag.vue"
     import chess from "../components/chess.vue"
@@ -65,15 +66,7 @@
                 sections: {
                     projects: {
                         thumbnails: [
-                            {
-                                title: this.$t("TECHNICAL_NINJA"),
-                                is_featured: false,
-                                subtitle: this.$t("TECHNICAL_NINJA_DESCRIPTION"),
-                                url: "https://technical-ninja.cleverapps.io/",
-                                url_text: this.$t("TRY"),
-                                cover: cover_technical_ninja,
-                                type: "web"
-                            },
+                            
                             {
                                 cover: cover_candy,
                                 url: "https://nicolas-brondin-bernard.itch.io/candy-candy-candy",
@@ -104,6 +97,15 @@
                                 type: "electronics"
                             },
                             {
+                                title: this.$t("TECHNICAL_NINJA"),
+                                is_featured: false,
+                                subtitle: this.$t("TECHNICAL_NINJA_DESCRIPTION"),
+                                url: "https://technical-ninja.cleverapps.io/",
+                                url_text: this.$t("TRY"),
+                                cover: cover_technical_ninja,
+                                type: "web"
+                            },
+                            {
                                 cover: cover_resume,
                                 url: "/cv/index.html",
                                 title: this.$t("ONLINE_RESUME"),
@@ -115,6 +117,14 @@
                     },
                     customers_projects: {
                         thumbnails: [
+                            {
+                                cover: cover_parentalite,
+                                url: "https://parentalite.org",
+                                title: this.$t("PARENTALITE2_0"),
+                                subtitle: this.$t("PARENTALITE2_0_DESCRIPTION"),
+                                url_text: this.$t("OPEN"),
+                                type: "web"
+                            },
                             {
                                 cover: cover_winesee,
                                 url: "https://winesee.fr",

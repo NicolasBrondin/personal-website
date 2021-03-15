@@ -6,16 +6,16 @@
             
             <div>
                 <a @click="captureOutboundLink('https://www.amazon.fr/dp/B08929ZCPK');" href="https://www.amazon.fr/dp/B08929ZCPK" target="_blank">
-                    <img id="book-cover" src="@/assets/img/books/fortnite.png"/>
+                    <img alt="Couverture du livre" id="book-cover" src="@/assets/img/books/fortnite.png"/>
                 </a>
             </div>
             
             <p><strong>Vous n'en pouvez plus d'entendre parler de Fortnite</strong> toute la journée ?</p> 
             <p>Vous avez l'impression que votre enfant est devenu <strong>accroc aux jeux vidéo</strong> ? </p>
             <p><strong>Vous ne savez plus quoi faire</strong> pour retrouver le calme et la sérénité à la maison ? </p>
-            <img src="@/assets/img/teenager.svg" class="illustration-teenager"/>
-            <img src="@/assets/img/random.svg" class="illustration-arrow"/>
-            <img src="@/assets/img/teenager-2.svg" class="illustration-teenager"/>
+            <img alt="Adolescent blasé" src="@/assets/img/teenager.svg" class="illustration-teenager"/>
+            <img alt="Flèche" src="@/assets/img/random.svg" class="illustration-arrow"/>
+            <img alt="Adolescent content" src="@/assets/img/teenager-2.svg" class="illustration-teenager"/>
             <h1>Rejoignez le club des parents apaisés !</h1>
             
             <p>Grâce à ce livre, vous retrouverez <strong>une relation stable avec votre enfant</strong>.</p>
@@ -27,19 +27,19 @@
             <flag text="Dans le top #50" />
             <p class="newsletter-price">des livres les plus vendus dans la catégorie Livres (Jeux PC) sur Amazon !</p>
             <div class="arrow-container" id="arrow-top">
-                <img src="@/assets/img/icons/upload.svg"/>
+                <img alt="fleche" src="@/assets/img/icons/upload.svg"/>
             </div>
              <a class="btn" id="amazon-button" @click="captureOutboundLink('https://www.amazon.fr/dp/B08929ZCPK');" href="https://www.amazon.fr/dp/B08929ZCPK" target="_blank">
-                <img src="@/assets/img/amazon.png" width="150"/>
+                <img alt="amazon" src="@/assets/img/amazon.png" width="150"/>
             </a>
             <div class="arrow-container" id="arrow-bottom">
-                <img src="@/assets/img/icons/upload.svg"/>
+                <img alt="fleche" src="@/assets/img/icons/upload.svg"/>
             </div>
             <!--p class="newsletter-price" style="margin-bottom: 0px;">à seulement 9,99€</p>-->
             
             <div style="margin-top: 20px;margin-bottom: 50px">
-                <img src="@/assets/img/ssl.png" height="30">
-                <img src="@/assets/img/credit-cards.jpg" height="30">
+                <img alt="Site sécurisé" src="@/assets/img/ssl.png" height="30">
+                <img alt="Toutes les cartes sont acceptées" src="@/assets/img/credit-cards.jpg" height="30">
             </div>
         </section>
         <hr>

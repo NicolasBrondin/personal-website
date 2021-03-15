@@ -6,8 +6,8 @@
             <p>Deviens membre de la <strong>newsletter</strong> et reçois un à deux emails <strong>par semaine</strong>. Je te partage <strong>mes articles</strong>, des news de mes projets mais aussi des <strong>offres spéciales</strong> sur mes formations !</p>
             <p>Je te parlerai de tout, en toute transparence, <strong>sans bullshit</strong> !</p>
             <div id="gift-container">
-                <img src="@/assets/img/icons/gift.svg" id="gift" @click="show_love" v-if="!love" height="50"/>
-                <img src="@/assets/img/icons/love.svg" id="heart" v-if="love" height="50"/>
+                <img alt="Cadeau" src="@/assets/img/icons/gift.svg" id="gift" @click="show_love" v-if="!love" height="50"/>
+                <img alt="Amour" src="@/assets/img/icons/love.svg" id="heart" v-if="love" height="50"/>
             </div>
             <a class="btn primary" href="https://brondin-bernard.us10.list-manage.com/subscribe?u=d7cceffbbbbee6e35dbba982f&id=1f2bfa9dc9" target="_blank">Devenir membre<!--<img src="@/assets/img/icons/crown.svg" height="20"/>--></a>
             <p class="newsletter-price">pour <strong>0€/mois</strong>, c'est gratuit !</p>

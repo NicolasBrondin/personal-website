@@ -2,7 +2,7 @@
 <section>
     <flag :text="$t('ERROR_404_FLAG')"/>
     <h1>{{$t('ERROR_404_TITLE')}}</h1>
-    <img id="tnt" src="@/assets/img/icons/bomb.svg" width="200"/>
+    <img class="Bombe" id="tnt" src="@/assets/img/icons/bomb.svg" width="200"/>
     <h3>{{$t('ERROR_404_TEXT')}}</h3>
     <nuxt-link style="margin-bottom: 20px;" :to="localePath('/')" class="btn primary">{{$t('BACK_HOME')}}</nuxt-link>
 </section>

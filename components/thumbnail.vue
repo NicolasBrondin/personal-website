@@ -4,16 +4,18 @@
         <div class="thumbnail-content">
             <span class="badge" v-if="data.is_finished">{{$t('FINISHED')}}</span>
             <span class="badge" v-if="data.is_featured">{{$t('FEATURED')}}</span>
+            <span class="badge is-offer" v-if="data.is_offer">{{$t('OFFER')}}</span>
             <p class="thumbnail-title">{{data.title}} </p>
             <p class="thumbnail-description" v-for="subtitle in subtitles" :key="subtitle">{{subtitle}}</p>
-            <img class="thumbnail-icon" :src="data.logo" v-if="data.logo"/>
-            <img class="thumbnail-icon" v-if="data.type === 'book'" src="~/assets/img/icons/book.svg"/>
-            <img class="thumbnail-icon" v-if="data.type === 'talk'" src="~/assets/img/icons/microphone.svg"/>
-            <img class="thumbnail-icon" v-if="data.type === 'dead'" src="~/assets/img/icons/grave.svg"/>
-            <img class="thumbnail-icon" v-if="data.type === 'game'" src="~/assets/img/icons/gamepad.svg"/>
-            <img class="thumbnail-icon" v-if="data.type === 'web'" src="~/assets/img/icons/web.svg"/>
-            <img class="thumbnail-icon" v-if="data.type === 'accreditation'" src="~/assets/img/icons/id-card.svg"/>
-            <img class="thumbnail-icon" v-if="data.type === 'electronics'" src="~/assets/img/icons/chip.svg"/>
+            <img alt="logo" class="thumbnail-icon" :src="data.logo" v-if="data.logo"/>
+            <img alt="course" class="thumbnail-icon" v-if="data.type === 'course'" src="~/assets/img/icons/cap.svg"/>
+            <img alt="livre" class="thumbnail-icon" v-if="data.type === 'book'" src="~/assets/img/icons/book.svg"/>
+            <img alt="microphone" class="thumbnail-icon" v-if="data.type === 'talk'" src="~/assets/img/icons/microphone.svg"/>
+            <img alt="tombe" class="thumbnail-icon" v-if="data.type === 'dead'" src="~/assets/img/icons/grave.svg"/>
+            <img alt="manette" class="thumbnail-icon" v-if="data.type === 'game'" src="~/assets/img/icons/gamepad.svg"/>
+            <img alt="web" class="thumbnail-icon" v-if="data.type === 'web'" src="~/assets/img/icons/web.svg"/>
+            <img alt="accreditation" class="thumbnail-icon" v-if="data.type === 'accreditation'" src="~/assets/img/icons/id-card.svg"/>
+            <img alt="électronique" class="thumbnail-icon" v-if="data.type === 'electronics'" src="~/assets/img/icons/chip.svg"/>
             <div class="thumbnail-footer" v-if="data.url">
                 <a :href="data.url" target="_blank" class="btn primary">{{data.url_text || $t('DISCOVER')}}</a>
             </div>
@@ -208,5 +210,9 @@ export default {
         height: 20px;
         padding: 0px 20px;
         line-height: 20px;
+    }
+
+    .thumbnail .badge.is-offer {
+        background: #1abc9c;
     }
 </style>

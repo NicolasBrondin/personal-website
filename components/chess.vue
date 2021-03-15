@@ -2,18 +2,18 @@
     <div class="chessboard">
         <div class="chessboard-line" v-for="(line, y) in chessboard" :key="y">
             <div class="chessboard-square" v-for="(square, x) in line" :key="x" @click="select_square(square,x,y)" :class="{'is-selected': square.is_selected}">
-                <img v-if="square.piece === 'pawn' && square.color === 'black'" src="~/assets/img/chess/pawn-black.svg"/>
-                <img v-if="square.piece === 'pawn' && square.color === 'white'" src="~/assets/img/chess/pawn-white.svg"/>
-                <img v-if="square.piece === 'rook' && square.color === 'black'" src="~/assets/img/chess/rook-black.svg"/>
-                <img v-if="square.piece === 'rook' && square.color === 'white'" src="~/assets/img/chess/rook-white.svg"/>
-                <img v-if="square.piece === 'knight' && square.color === 'black'" src="~/assets/img/chess/knight-black.svg"/>
-                <img v-if="square.piece === 'knight' && square.color === 'white'" src="~/assets/img/chess/knight-white.svg"/>
-                <img v-if="square.piece === 'bishop' && square.color === 'black'" src="~/assets/img/chess/bishop-black.svg"/>
-                <img v-if="square.piece === 'bishop' && square.color === 'white'" src="~/assets/img/chess/bishop-white.svg"/>
-                <img v-if="square.piece === 'queen' && square.color === 'black'" src="~/assets/img/chess/queen-black.svg"/>
-                <img v-if="square.piece === 'queen' && square.color === 'white'" src="~/assets/img/chess/queen-white.svg"/>
-                <img v-if="square.piece === 'king' && square.color === 'black'" src="~/assets/img/chess/king-black.svg"/>
-                <img v-if="square.piece === 'king' && square.color === 'white'" src="~/assets/img/chess/king-white.svg"/>
+                <img alt="pion noir" v-if="square.piece === 'pawn' && square.color === 'black'" src="~/assets/img/chess/pawn-black.svg"/>
+                <img alt="pion blanc" v-if="square.piece === 'pawn' && square.color === 'white'" src="~/assets/img/chess/pawn-white.svg"/>
+                <img alt="tour noire" v-if="square.piece === 'rook' && square.color === 'black'" src="~/assets/img/chess/rook-black.svg"/>
+                <img alt="tour blanche" v-if="square.piece === 'rook' && square.color === 'white'" src="~/assets/img/chess/rook-white.svg"/>
+                <img alt="Cavalier noir" v-if="square.piece === 'knight' && square.color === 'black'" src="~/assets/img/chess/knight-black.svg"/>
+                <img alt="Cavalier blanc" v-if="square.piece === 'knight' && square.color === 'white'" src="~/assets/img/chess/knight-white.svg"/>
+                <img alt="Fou noir" v-if="square.piece === 'bishop' && square.color === 'black'" src="~/assets/img/chess/bishop-black.svg"/>
+                <img alt="Fou blanc" v-if="square.piece === 'bishop' && square.color === 'white'" src="~/assets/img/chess/bishop-white.svg"/>
+                <img alt="Dame noire" v-if="square.piece === 'queen' && square.color === 'black'" src="~/assets/img/chess/queen-black.svg"/>
+                <img alt="Dame blanche" v-if="square.piece === 'queen' && square.color === 'white'" src="~/assets/img/chess/queen-white.svg"/>
+                <img alt="Roi noir" v-if="square.piece === 'king' && square.color === 'black'" src="~/assets/img/chess/king-black.svg"/>
+                <img alt="Roi blanc" v-if="square.piece === 'king' && square.color === 'white'" src="~/assets/img/chess/king-white.svg"/>
             </div>
         </div>
     </div>
@@ -28,14 +28,14 @@ export default {
             turn: "white",
             from: null,
             chessboard: [
-                [ {piece: "rook", color: "black"},{piece: "knight", color: "black"},{piece: "bishop", color: "black"},{piece: "king", color: "black"},{piece: "queen", color: "black"},{piece: "bishop", color: "black"},{piece: "knight", color: "black"},{piece: "rook", color: "black"} ],
+                [ {piece: "rook", color: "black"},{piece: "knight", color: "black"},{piece: "bishop", color: "black"},{piece: "queen", color: "black"},{piece: "king", color: "black"},{piece: "bishop", color: "black"},{piece: "knight", color: "black"},{piece: "rook", color: "black"} ],
                 [ {piece: "pawn", color: "black"},{piece: "pawn", color: "black"},{piece: "pawn", color: "black"},{piece: "pawn", color: "black"},{piece: "pawn", color: "black"},{piece: "pawn", color: "black"},{piece: "pawn", color: "black"},{piece: "pawn", color: "black"} ],
                 [ {},{},{},{},{},{},{},{} ],
                 [ {},{},{},{},{},{},{},{} ],
                 [ {},{},{},{},{},{},{},{} ],
                 [ {},{},{},{},{},{},{},{} ],
                 [ {piece: "pawn", color: "white"},{piece: "pawn", color: "white"},{piece: "pawn", color: "white"},{piece: "pawn", color: "white"},{piece: "pawn", color: "white"},{piece: "pawn", color: "white"},{piece: "pawn", color: "white"},{piece: "pawn", color: "white"} ],
-                [ {piece: "rook", color: "white"},{piece: "knight", color: "white"},{piece: "bishop", color: "white"},{piece: "king", color: "white"},{piece: "queen", color: "white"},{piece: "bishop", color: "white"},{piece: "knight", color: "white"},{piece: "rook", color: "white"} ]
+                [ {piece: "rook", color: "white"},{piece: "knight", color: "white"},{piece: "bishop", color: "white"},{piece: "queen", color: "white"},{piece: "king", color: "white"},{piece: "bishop", color: "white"},{piece: "knight", color: "white"},{piece: "rook", color: "white"} ]
             ]
         };
     },
@@ -157,10 +157,10 @@ export default {
     background: rgba(52, 152, 219,0.5)
 }
 
-.chessboard-line:nth-child(even) .chessboard-square:nth-child(even):not(.is-selected) {
+.chessboard-line:nth-child(odd) .chessboard-square:nth-child(even):not(.is-selected) {
     background: rgba(0,0,0,0.2);
 }
-.chessboard-line:nth-child(odd) .chessboard-square:nth-child(odd):not(.is-selected) {
+.chessboard-line:nth-child(even) .chessboard-square:nth-child(odd):not(.is-selected) {
     background: rgba(0,0,0,0.2);
 }
 
